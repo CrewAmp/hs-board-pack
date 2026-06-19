@@ -1,0 +1,16 @@
+# Local Wrangler cache + tmp files
+.wrangler/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Backup snapshots — keep history in git instead
+*.bak-*
+
+# Older PDF renders — only the latest is committed; previous live in deploy history
+safetyculture-board-pack.pdf
+safetyculture-board-pack-2026-06-19.pdf
+safetyculture-board-pack-2026-06-19-v2.pdf
+safetyculture-board-pack-2026-06-19-v3.pdf
+safetyculture-board-pack-2026-06-19-v4.pdf
+safetyculture-board-pack-2026-06-19-v5.pdf

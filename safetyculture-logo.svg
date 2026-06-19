@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100">
+  <text x="0" y="68" font-family="-apple-system, 'SF Pro Display', 'Inter', Arial, sans-serif" font-size="58" font-weight="900" font-style="italic" fill="#1E2A47" letter-spacing="-1.8">SafetyCulture</text>
+  <rect x="220" y="82" width="65" height="6" fill="#5F5CE5"/>
+  <rect x="285" y="82" width="65" height="6" fill="#22C4F8"/>
+  <rect x="350" y="82" width="80" height="6" fill="#FFD93D"/>
+</svg>
