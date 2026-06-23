@@ -16,7 +16,7 @@
 |---|---|
 | Page size | 338.67mm × 190.5mm (landscape A4) |
 | Page margin | 0 (full bleed) |
-| Fonts | Work Sans 400/500/600/700/800 + DM Serif Display 400/400-italic |
+| Fonts | Work Sans only · 300/400/500/600/700/800/900 (single-family system; DM Serif Display removed 24/06/2026) |
 | Print colour | `-webkit-print-color-adjust:exact` so gradients + radial fills render |
 | Page break | `page-break-after:always` between sections |
 | Resolution target | 144 dpi minimum on logos + screenshots; SVG inline where possible |
@@ -59,12 +59,12 @@ Plus two radial overlays (upper-right bright halo, lower-left cooler emerald) fo
 
 | Class | Font | Size | Use |
 |---|---|---|---|
-| `.h1` | DM Serif Display 400 | 24pt | Page H1 |
-| `.h1 .accent` | DM Serif Display 400 | inherit | Emerald accent run inside the H1 |
+| `.h1` | Work Sans 800 | 24pt | Page H1 |
+| `.h1 .accent` | Work Sans 800 | inherit | Emerald accent run inside the H1 |
 | `.lede` | Work Sans 400 | 9.5pt | One-paragraph standfirst beneath the H1 |
 | `.pageheader-eyebrow` | Work Sans 800 | 7.5pt UPPERCASE | Breadcrumb (top-left) |
 | `.pageheader-client` | Work Sans 700 | 7.5pt UPPERCASE | Client + section identifier (top-right) |
-| `.stat-value` | DM Serif Display 400 | 32pt | Hero stats |
+| `.stat-value` | Work Sans 800 | 32pt | Hero stats |
 
 **Logos**
 
@@ -128,9 +128,9 @@ Legend for **Type**: `cover` (full-bleed title), `divider` (full-bleed section b
 |---|---|---|---|---|---|---|
 | 19 | Divider · The Commercial Impact of Partnerships | divider · static | `The Commercial Impact of Partnerships.` | Section header. Two-line break in title preserves the gradient surface area. | Section title only | Identical |
 | 20 | Competitor Analysis matrix (Alex A6) | content · dynamic | `Competitor Analysis.` 7-criteria × N-competitor matrix + Total + score key | `ALEX_A6.competitor_matrix`. Default 3 competitors (Asana / Smartsheet / Monday.com); 7 criteria with 1-5 scores. Score key: 1=No / 2=Basic / 3=Developing / 4=Advanced / 5=Best in class. | Competitor list per client, scores per cell | Identical |
-| 21 | Partnership GTM Channels · Top Down Model (Riley R2) | content · dynamic | `Partnership GTM Channels · Top Down Model.` (no subtitle) | `RILEY_R2.channels` (4 channel cards: PLG / Marketing / Sales / Partner-led) + revenue mix bar + **all 8 partner categories in a single horizontal row** (Technology / Strategic / Channel / Referral / Reseller / Affiliate / Marketplace / OEM) with `% Revenue` + `% Leads` per category. Mirrors the new R2 Category view in Riley. | Channel mix values, all 8 category Revenue% + Leads% | Platform R2 Category view is interactive editable workshop worksheet; PDF flattens to a read-only horizontal strip showing all 8 categories. |
-| 22 | Bottom-Up Partnership Model (Riley R4 pyramid) | content · dynamic | `Bottom-Up Partnership Model · building up to the revenue target.` Inverted pyramid: 4 layers (Partner pool → Active partners → Client activations → Gross Deal Value) | `r3SumAll(drivers, cfg)` totals via `useR3()`. All 4 layer boxes use a consistent `1.5px solid var(--emerald)` border. Connector strips between layers (× ACV, × clients/partner, × activation %). Compact paddings (4mm) + shorter connectors (5mm) so all four layers fit fully on the page. | All four pyramid values + ACV + GDV | Platform R4 pyramid is interactive; PDF flattens to four stacked boxes. |
-| 23 | Bottom-Up · Category view + Reconciliation | content · dynamic | `Bottom-Up Partnership Model · category view + reconciliation.` | Category view: 8 categories sorted by revenue (Technology → OEM), each showing $ revenue + % revenue. Reconciliation table: Metric / Target / Bottom-Up / Variance / Status across Client Activations · Revenue · % of Closed Business (implied). Status flips emerald (≥ target) or red (below). Mirrors Riley R4 Bottom-Up vs Target reconciliation. | Per-category $ + %, all three reconciliation rows | Platform shows interactive category cards + reconciliation table; PDF condenses to a read-only summary page. |
+| 21 | Partnership GTM Channels · Yr 1 + Yr 2 (Riley R2 v4.1) | content · dynamic | `Partnership GTM Channels · Top-Down model · Yr 1 + Yr 2.` | Top of page: two Expected Partnership Revenue tiles (Yr 1 emerald accent, Yr 2 forest accent). Four channel cards (PLG / Marketing / Sales / Partner-led primary) — each card has a 3-col inner grid (row label | Yr 1 | Yr 2) with 7 rows: Leads, Trial Conv %, Trials (derived), Activation %, Activations (derived), Revenue %, Revenue (derived = Expected Partnership Revenue × Revenue %). Single Revenue Mix card with two bars stacked (Yr 1 emerald · Yr 2 forest) + shared 4-col categories grid at the bottom. | Expected Partnership Revenue per year, per-channel per-year 4 inputs (Leads, Trial Conv %, Activation %, Revenue %), shared category sub-lists per channel. | Platform R2 is interactive workshop worksheet; PDF flattens both years as read-only side-by-side numeric grids per card. |
+| 22 | Bottom-Up Partnership Model · Yr 1 + Yr 2 (Riley R4 pyramid) | content · dynamic | `Bottom-Up Partnership Model · Yr 1 + Yr 2 funnel build-up.` Two inverted funnel pyramids side by side (Yr 1 emerald · Yr 2 forest), 6 layers each (Revenue apex → Activations → Trials → Leads → Active partners → Partner pool base) | `r3FunnelTotals(catRegionTable, topDown, year)` per year via `useR3()`. Each pyramid sized identically (60% top → 100% base) with emerald connectors between layers. Year label above each pyramid. | All 6 layer values × 2 years (Pool, Active partners, Leads, Trials, Activations, Revenue + per-layer sub-text) | Platform R4 has Yr 1 / Yr 2 toggle; PDF shows both years simultaneously side-by-side since there's no interactivity. |
+| 23 | Bottom-Up · Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4) | content · dynamic | `Category view + reconciliation · Yr 1 vs Yr 2.` | TOP HALF: Category view per year, side by side (Yr 1 emerald left · Yr 2 forest right). Each side has 8 category cards in a 2-col grid showing $ revenue + active partner count per category. BOTTOM HALF: Reconciliation table per year, side by side. Each table is a 5-column grid (Metric / Top-Down R2 / Bottom-Up R3 / Variance / Status) with rows for Leads / Trials / Activations / Revenue. Top-Down = R2 Partner-Led channel slice per year; Bottom-Up = R3 cat × region SUM per year. Status flips emerald (≥ TD) or red (below). | Per-category $ + active count × 2 years, all 4 reconciliation rows × 2 years | Platform R4 uses year toggle; PDF shows both years simultaneously for executive-pack comparison. |
 
 ### Section 4 · How to Win (pages 24-27)
 
@@ -178,8 +178,9 @@ This is the final agenda section. **Key Areas of Focus is the last page inside t
 - 15 Customer journey (Alex A4)
 - 16-18 Mapping Partners to the Customer Journey · ICP 1/2/3 (Alex A2 top-3 categories)
 - 20 Competitor Analysis (Alex A6)
-- 21 GTM Channels · Top Down Model (Riley R2 Category view — all 8 categories)
-- 22 Bottom-Up Partnership Model pyramid (Riley R4)
+- 21 GTM Channels · Yr 1 + Yr 2 (Riley R2 v4.1)
+- 22 Bottom-Up Partnership Model · two pyramids side by side (Riley R4 · Yr 1 + Yr 2)
+- 23 Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4)
 - 23 Category view + Reconciliation (Riley R4 Category view + R3 reconciliation)
 - 25 What we want from partners (Alex A9)
 - 26 What we offer partners (Alex A11)
@@ -197,8 +198,9 @@ Most pages are pixel-faithful to the in-app view. The exceptions, where the PDF 
 | Page | In-app form | PDF form | Why |
 |---|---|---|---|
 | 08 Ecosystem Map | Interactive radial canvas with drag-able nodes | Server-side PNG snapshot rendered at canvas resolution | Static medium; readers need a frozen frame |
-| 21 GTM Channels Top-Down | Editable workshop worksheet (R2) with amber inputs + Add-category CTA | Read-only horizontal strip listing all 8 categories with Revenue% + Leads% per box | One-glance executive summary |
-| 22 Bottom-Up pyramid | Interactive pyramid with hover detail | Four stacked boxes with explicit connectors (× ACV, × clients/partner, × activation %) | Show the formula chain visibly without interactivity |
+| 21 GTM Channels Top-Down | Editable Yr 1 + Yr 2 worksheet (R2 v4.1) with amber inputs + Expected Partnership Revenue tiles | Read-only 4-card grid with per-card Yr 1 + Yr 2 inner columns (7 rows each) + single Revenue Mix card with Yr 1 + Yr 2 bars stacked + shared categories | Both years simultaneously visible in the static PDF (no toggle available) |
+| 22 Bottom-Up pyramid | Interactive pyramid with Yr 1 / Yr 2 toggle | Two pyramids side by side (Yr 1 emerald left · Yr 2 forest right), 6 layers each with emerald connectors | Both years visible at once; no toggle in static output |
+| 23 Reconciliation | Year-toggled category cards + reconciliation table (R4 v6.2.4) | Two side-by-side category-view grids (8 cards each, 2-col layout) above two side-by-side reconciliation tables (4 rows each) | Yr 1 + Yr 2 comparison without interaction |
 | 23 Category view + Reconciliation | Two separate Riley R4 tabs | Single combined page (category strip + reconciliation table) | One-stop business-case page |
 | 25 What we want from partners | Wide matrix with full-text pills per cell | Compact pills (font 7.5pt, gap 1mm, pill padding 1mm × 2mm) | Fit 3 rows × 5 stages onto one A4 landscape |
 | 26 What we offer partners | Same as above | Same compact pattern | Same |
@@ -235,7 +237,7 @@ Per-engagement values pulled from the engagement record:
 | Riley R6 Crawl-Walk-Run | Page 30 | (per engagement) |
 | Riley R8 24-month timeline | Page 31 | (per engagement) |
 
-Branding stays constant — HockeyStick logos + colour tokens + Work Sans / DM Serif Display.
+Branding stays constant — HockeyStick logos + colour tokens + Work Sans (single-family) since 24/06/2026.
 
 ---
 
