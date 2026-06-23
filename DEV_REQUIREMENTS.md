@@ -1,12 +1,12 @@
 # Riley Board Pack · Developer Requirements
 
-**Status:** v4 spec (2026-06-19) — supersedes v3 (2026-06-16).
+**Status:** v9 spec (2026-06-24) — supersedes v8.
 
-**Output:** 32-page landscape A4 PDF, generated server-side from `index.html` via Cloudflare Browser Rendering, saved to R2, link returned to Riley as the final agent deliverable.
+**Output:** 33-page landscape A4 PDF (one extra page introduced 24/06/2026 when the GTM page split into per-year pages), generated server-side from `index.html` via Cloudflare Browser Rendering, saved to R2, link returned to Riley as the final agent deliverable.
 
 **Live mockup:** https://hs-board-pack.pages.dev · source `hs-board-pack-mockup/index.html`
 
-**Latest snapshot PDF:** `safetyculture-board-pack-2026-06-19-v4.pdf`
+**Latest snapshot PDF:** `safetyculture-board-pack-2026-06-24-v9.pdf`
 
 ---
 
@@ -59,12 +59,15 @@ Plus two radial overlays (upper-right bright halo, lower-left cooler emerald) fo
 
 | Class | Font | Size | Use |
 |---|---|---|---|
-| `.h1` | Work Sans 800 | 24pt | Page H1 |
-| `.h1 .accent` | Work Sans 800 | inherit | Emerald accent run inside the H1 |
-| `.lede` | Work Sans 400 | 9.5pt | One-paragraph standfirst beneath the H1 |
-| `.pageheader-eyebrow` | Work Sans 800 | 7.5pt UPPERCASE | Breadcrumb (top-left) |
+| `.h1` | Work Sans 700 · -0.02em tracking | 24pt | Page H1 (brand-guide Heading) |
+| `.h1 .accent` | Work Sans 700 | inherit | Emerald accent run inside the H1 |
+| `.lede` | Work Sans 300 · -0.04em tracking | 9.5pt | Sub-heading / standfirst beneath the H1 (brand-guide Sub-heading) |
+| `.cover-title` / `.div-num` / `.div-title` | Work Sans 700 · -0.02em | 74/200/80pt | Cover + division title display |
+| `.serif` | Work Sans 700 · -0.02em | inherit | Display utility (big numerals, stat values, KPI tiles) |
+| `.stat-value` | Work Sans 700 · -0.02em | 32pt | Hero stats |
+| `.pageheader-eyebrow` | Work Sans 800 | 7.5pt UPPERCASE | Breadcrumb (top-left) — label chip, not a heading |
 | `.pageheader-client` | Work Sans 700 | 7.5pt UPPERCASE | Client + section identifier (top-right) |
-| `.stat-value` | Work Sans 800 | 32pt | Hero stats |
+| Body copy | Work Sans 300 · 0 tracking | varies | Brand-guide Body |
 
 **Logos**
 
@@ -87,7 +90,9 @@ Numbers are written into `.footer-pg` (content pages) and `.div-foot-pg` (divide
 
 ---
 
-## 3 · Page list (32 pages, sequential)
+## 3 · Page list (33 pages, sequential)
+
+> **Note (24/06/2026):** the GTM Channels page split into a Yr 1 page and a Yr 2 page, growing the deck from 32 → 33 pages. All footer page numbers re-rendered by the renumber pass. Title changed to "Partnership Growth Model" with the new subtitle.
 
 Legend for **Type**: `cover` (full-bleed title), `divider` (full-bleed section break), `content` (white `.frame`), `static` (no per-engagement data variability), `dynamic` (live values from platform).
 
@@ -118,40 +123,41 @@ Legend for **Type**: `cover` (full-bleed title), `divider` (full-bleed section b
 | 11 | Ecosystem Maturity Report (Sam D3) | content · dynamic | `{ClientName} is {ClassificationBand} on the partnership ecosystem maturity scale.` Hero + composite score + radar + dimension table | `MATURITY_DEFINITIONS` + `MATURITY_BANDS` + `scoreMaturity(intake)` + `BENCHMARK_BY_STAGE[client.stage]`. Per-dimension scores from Sam D3 intake. | All scores + classification + band, radar shape, dimension table | Identical layout to in-app D3 view. PDF condenses to one page. |
 | 12 | Partnership Readiness Diagnostic (Sam D4) | content · dynamic | `{ClientName} is {RAG} across {N} of 7 readiness categories.` Donut + 7-card RAG strip | `READINESS_DIMENSIONS` + `scoreReadiness(intake)`. 7 dimensions: People / Process / Programs / Technology / Data / Budget / Exec buy-in. Per-dimension score + RAG + blocker count. | All scores, RAG, blockers | Identical |
 | 13 | Customer revenue left on the table | content · dynamic | `Customer revenue left on the table.` + 3 chart cards | `ALEX_A3.cohort_metrics` — three KPIs: win rate, average deal size, weekly active users. Each shows Direct vs With Partner vs Benchmark + lift %. Gap to benchmark headline e.g. `+19%`. Footer: missed-revenue commercial hook (gradient strip with `$X left on the table`). | All metric values + benchmark gap + missed revenue $ | Identical |
-| 14 | Where to play, how to win · 5-question strategy (Riley R1) | content · dynamic | `Where to play, how to win.` 5 horizontal cards (Vision / Play / Win / Capabilities / Systems) | `RILEY.r1_strategy_pyramid` answers. Each card has a left green-gradient label panel (`75mm` wide) + right white body. Equal-height rows with `gap:4mm` for consistent vertical rhythm. | All 5 strategy answers | Identical |
+| 14 | Where to play, how to win · 5-question strategy (Riley R1) | content · dynamic | `Where to play, how to win.` 5 horizontal cards (Vision / Play / Win / Capabilities / Systems) | `RILEY.r1_strategy_pyramid` answers. Each card has a left green-gradient label panel (`75mm` wide) + right white body. Equal-height rows with `gap:4mm`. **Tightened 24/06/2026:** card body 9pt / line-height 1.45, padding 4mm 7mm (right) + 4mm 6mm (left), title 14pt — so all 5 cards fit on the landscape A4 page without overflow under the new Light-300 body weight. | All 5 strategy answers | Identical |
 | 15 | Customer journey · Partner types × Executive lens (Alex A4) | content · dynamic | `Partners across the customer journey.` 5-stage chevron + grid | `ALEX_A4.customer_journey`. 5 buyer stages with chevron labels; partner types per stage + KPIs that move + executive owners. Activation is the focus stage (highlighted forest). | Per-stage partner types, KPIs, owners | Identical |
 | 16-18 | Mapping Partners to the Customer Journey · ICP 1/2/3 | content · dynamic | Each page eyebrows `Mapping Partners to the Customer Journey` + H1 e.g. `Technology · ISVs.` | ICP cards generated from the top-3 priority categories in `ALEX_A2.priority_categories`. Each card: 5 customer needs × 5 categories × stars × workflow narrative. Pages 16/17/18 = Technology / Strategic / Channel. | Top 3 categories per client (drives which 3 pages render); per-card text | Identical |
 
-### Section 3 · The Commercial Impact of Partnerships (pages 19-23)
+### Section 3 · The Commercial Impact of Partnerships (pages 19-24)
 
 | # | Page | Type | Title / breadcrumb | Source(s) | Variability per client | PDF vs Platform format |
 |---|---|---|---|---|---|---|
 | 19 | Divider · The Commercial Impact of Partnerships | divider · static | `The Commercial Impact of Partnerships.` | Section header. Two-line break in title preserves the gradient surface area. | Section title only | Identical |
 | 20 | Competitor Analysis matrix (Alex A6) | content · dynamic | `Competitor Analysis.` 7-criteria × N-competitor matrix + Total + score key | `ALEX_A6.competitor_matrix`. Default 3 competitors (Asana / Smartsheet / Monday.com); 7 criteria with 1-5 scores. Score key: 1=No / 2=Basic / 3=Developing / 4=Advanced / 5=Best in class. | Competitor list per client, scores per cell | Identical |
-| 21 | Partnership GTM Channels · Yr 1 + Yr 2 (Riley R2 v4.1) | content · dynamic | `Partnership GTM Channels · Top-Down model · Yr 1 + Yr 2.` | Top of page: two Expected Partnership Revenue tiles (Yr 1 emerald accent, Yr 2 forest accent). Four channel cards (PLG / Marketing / Sales / Partner-led primary) — each card has a 3-col inner grid (row label | Yr 1 | Yr 2) with 7 rows: Leads, Trial Conv %, Trials (derived), Activation %, Activations (derived), Revenue %, Revenue (derived = Expected Partnership Revenue × Revenue %). Single Revenue Mix card with two bars stacked (Yr 1 emerald · Yr 2 forest) + shared 4-col categories grid at the bottom. | Expected Partnership Revenue per year, per-channel per-year 4 inputs (Leads, Trial Conv %, Activation %, Revenue %), shared category sub-lists per channel. | Platform R2 is interactive workshop worksheet; PDF flattens both years as read-only side-by-side numeric grids per card. |
-| 22 | Bottom-Up Partnership Model · Yr 1 + Yr 2 (Riley R4 pyramid) | content · dynamic | `Bottom-Up Partnership Model · Yr 1 + Yr 2 funnel build-up.` Two inverted funnel pyramids side by side (Yr 1 emerald · Yr 2 forest), 6 layers each (Revenue apex → Activations → Trials → Leads → Active partners → Partner pool base) | `r3FunnelTotals(catRegionTable, topDown, year)` per year via `useR3()`. Each pyramid sized identically (60% top → 100% base) with emerald connectors between layers. Year label above each pyramid. | All 6 layer values × 2 years (Pool, Active partners, Leads, Trials, Activations, Revenue + per-layer sub-text) | Platform R4 has Yr 1 / Yr 2 toggle; PDF shows both years simultaneously side-by-side since there's no interactivity. |
-| 23 | Bottom-Up · Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4) | content · dynamic | `Category view + reconciliation · Yr 1 vs Yr 2.` | TOP HALF: Category view per year, side by side (Yr 1 emerald left · Yr 2 forest right). Each side has 8 category cards in a 2-col grid showing $ revenue + active partner count per category. BOTTOM HALF: Reconciliation table per year, side by side. Each table is a 5-column grid (Metric / Top-Down R2 / Bottom-Up R3 / Variance / Status) with rows for Leads / Trials / Activations / Revenue. Top-Down = R2 Partner-Led channel slice per year; Bottom-Up = R3 cat × region SUM per year. Status flips emerald (≥ TD) or red (below). | Per-category $ + active count × 2 years, all 4 reconciliation rows × 2 years | Platform R4 uses year toggle; PDF shows both years simultaneously for executive-pack comparison. |
+| 21 | Partnership Growth Model · Year 1 (Riley R2 v4.1) | content · dynamic | `Partnership Growth Model · Year 1.` Subtitle: "The top-down projected contribution of Product, Marketing, Sales and Partnerships to future revenue growth." | Single Expected Partnership Revenue tile (Yr 1 emerald accent). Four channel cards (PLG / Marketing / Sales · outbound / Partner-led — partner card uses emerald gradient + star). Each card has a 2-col inner grid (label / value) with 7 rows: Leads, Trial Conv %, Trials, Activation %, Activations, Revenue %, Revenue. Single Revenue Mix bar (one row, four segments — PLG / Marketing / Sales / Partner). Shared 4-col categories grid (sub-lists per channel) below. | Expected Partnership Revenue Yr 1, per-channel Yr 1 4 inputs (Leads, Trial Conv %, Activation %, Revenue %), shared category sub-lists per channel. | Platform R2 is interactive workshop worksheet with Yr 1/Yr 2 toggle; PDF splits to one page per year (24/06/2026) so all detail fits on the landscape page without overflow. |
+| 22 | Partnership Growth Model · Year 2 (Riley R2 v4.1) | content · dynamic | `Partnership Growth Model · Year 2.` Subtitle as page 21. | Identical layout to page 21 but populated with Yr 2 values. Single Expected Partnership Revenue tile uses forest accent. Mix bar segments + dollar totals reflect Yr 2 split. | Expected Partnership Revenue Yr 2, per-channel Yr 2 4 inputs, same shared categories. | As above — splitting per year keeps content from clipping. |
+| 23 | Bottom-Up Partnership Model · Yr 1 + Yr 2 (Riley R4 pyramid) | content · dynamic | `Bottom-Up Partnership Model · Yr 1 + Yr 2 funnel build-up.` Two inverted funnel pyramids side by side (Yr 1 emerald · Yr 2 forest), 6 layers each (Revenue apex → Activations → Trials → Leads → Active partners → Partner pool base) | `r3FunnelTotals(catRegionTable, topDown, year)` per year via `useR3()`. Each pyramid sized 60% top → 100% base with emerald connectors. **Tightened 24/06/2026:** Revenue apex 17pt, other layers 13–15pt, paddings 2–2.5mm, gaps 1mm — so both pyramids fit comfortably on the landscape page. Year label above each pyramid. | All 6 layer values × 2 years (Pool, Active partners, Leads, Trials, Activations, Revenue + per-layer sub-text) | Platform R4 has Yr 1 / Yr 2 toggle; PDF shows both years simultaneously side-by-side since there's no interactivity. |
+| 24 | Bottom-Up · Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4) | content · dynamic | `Category view + reconciliation · Yr 1 vs Yr 2.` | TOP HALF: Category view per year side by side (Yr 1 emerald left · Yr 2 forest right). Each side has 8 category cards in a 2-col grid showing $ revenue + active partner count per category. **Tightened 24/06/2026:** card body 11pt serif, paddings 1.5mm 2mm, label 6.5pt — so 8 cards × 2 years all fit. BOTTOM HALF: Reconciliation table per year side by side (5-col grid: Metric / TD · R2 / BU · R3 / Var / Status, 4 rows). | Per-category $ + active count × 2 years, all 4 reconciliation rows × 2 years | Platform R4 uses year toggle; PDF shows both years simultaneously for executive-pack comparison. |
 
-### Section 4 · How to Win (pages 24-27)
-
-| # | Page | Type | Title / breadcrumb | Source(s) | Variability per client | PDF vs Platform format |
-|---|---|---|---|---|---|---|
-| 24 | Divider · How to Win | divider · static | `How to Win.` | Static | None | Identical |
-| 25 | What we want from partners (Alex A9) | content · dynamic | `What we want from partners · across the journey.` 5-stage × 3-row grid (Partner activities / Partner value add / Business outcomes) | `ALEX_A9.partner_expectations`. Each cell carries 3-5 pills with maturity markers `C` (Crawl) / `W` (Walk) / `R` (Run). **Compact spacing** (font 7.5pt, gap 1mm, pill padding 1mm × 2mm) so all 3 rows × 5 stages fit on one page. | Per-cell expectations + maturity assignments | Platform shows a wider editable matrix per cell; PDF compacts the pills to fit. |
-| 26 | What we offer partners (Alex A11) | content · dynamic | `What we offer partners.` Mirror-shape grid | `ALEX_A11.partner_offers`. Same 5-stage × 3-row structure (HockeyStick activities / value add / business outcomes) | Per-cell offers | Identical compact spacing pattern. |
-| 27 | Partnership inputs + outputs (Alex A10) | content · dynamic | `Partnership inputs + outputs.` | `ALEX_A10.partnership_io`. Two-column layout (inputs we provide → outputs we get back). | All input/output rows | Identical |
-
-### Section 5 · Crawl, Walk, Run (pages 28-32)
-
-This is the final agenda section. **Key Areas of Focus is the last page inside this section, not its own agenda entry.** The 24-month timeline (page 31) is the visualised expression of the key areas of focus within the Crawl, Walk, Run phasing.
+### Section 4 · How to Win (pages 25-28)
 
 | # | Page | Type | Title / breadcrumb | Source(s) | Variability per client | PDF vs Platform format |
 |---|---|---|---|---|---|---|
-| 28 | Divider · Crawl, Walk, Run | divider · static | `Crawl, Walk, Run.` | Static | None | Identical |
-| 29 | Key Workstreams (Riley R5 starred) — **single row of 4 vertical boxes** | content · dynamic | `Four key workstreams to make this partnership program a success.` | `RILEY_R5.workstreams` filtered by `is_starred === true`. Each box: workstream ID (WS-XX) + star + Effort + ROI pills + serif title + body + Owner + Window. WS-08 gets the forest-gradient treatment as the strategic anchor. Layout is **`grid-template-columns:repeat(4,1fr)` — single row**, not a 2 × 2 grid. | The 4 starred workstreams per client | Platform shows full workstream list with filter; PDF crystallises to the top 4 starred. |
-| 30 | Crawl · Walk · Run Strategy (R6) | content · dynamic | `Crawl · Walk · Run Strategy.` Three columns (Days 1-90 / 90-180 / 180+) with bullets per phase | `RILEY_R6.crawl_walk_run`. Each column gradient: Crawl emerald → mint, Walk emerald → darkGreen, Run forest. | All bullets per phase | Identical |
-| 31 | Key Areas of Focus · 24-Month Timeline (R8) | content · dynamic | Breadcrumb `Crawl, Walk, Run Strategy`. H1 `Key areas of focus · 24-month timeline.` | `RILEY_R8.timeline`. 9 swimlanes (WS-01 → WS-08 + Global playbook) plotted across 8 quarters (Q1-Q4 FY26 + H1-H2 FY27 + FY28). Bars colour-coded by priority (red high / amber medium / emerald low / gradient = sustained). **Row padding 3.5mm + bar height 5mm + bar label 7.5pt** so the 9 swimlanes spread evenly down the page. | Per-WS bar placement + label | Identical |
-| 32 | Closing / Thank you | cover · static | Gradient bleed with closing message + HockeyStick logo + ABN | Static text. Same gradient as the cover. | None | Identical |
+| 25 | Divider · How to Win | divider · static | `How to Win.` | Static | None | Identical |
+| 26 | What we want from partners (Alex A9) | content · dynamic | `What we want from partners · across the journey.` 5-stage × 3-row grid (Partner activities / Partner value add / Business outcomes) | `ALEX_A9.partner_expectations`. Each cell carries 3-5 pills with maturity markers `C` (Crawl) / `W` (Walk) / `R` (Run). **Compact spacing** (font 7.5pt, gap 1mm, pill padding 1mm × 2mm) so all 3 rows × 5 stages fit on one page. | Per-cell expectations + maturity assignments | Platform shows a wider editable matrix per cell; PDF compacts the pills to fit. |
+| 27 | What we offer partners (Alex A11) | content · dynamic | `What we offer partners.` Mirror-shape grid | `ALEX_A11.partner_offers`. Same 5-stage × 3-row structure (HockeyStick activities / value add / business outcomes) | Per-cell offers | Identical compact spacing pattern. |
+| 28 | Partnership inputs + outputs (Alex A10) | content · dynamic | `Partnership inputs + outputs.` | `ALEX_A10.partnership_io`. Two-column layout (inputs we provide → outputs we get back). | All input/output rows | Identical |
+
+### Section 5 · Crawl, Walk, Run (pages 29-33)
+
+This is the final agenda section. **Key Areas of Focus is the last page inside this section, not its own agenda entry.** The 24-month timeline (page 32) is the visualised expression of the key areas of focus within the Crawl, Walk, Run phasing.
+
+| # | Page | Type | Title / breadcrumb | Source(s) | Variability per client | PDF vs Platform format |
+|---|---|---|---|---|---|---|
+| 29 | Divider · Crawl, Walk, Run | divider · static | `Crawl, Walk, Run.` | Static | None | Identical |
+| 30 | Key Workstreams (Riley R5 starred) — **single row of 4 vertical boxes** | content · dynamic | `Four key workstreams to make this partnership program a success.` | `RILEY_R5.workstreams` filtered by `is_starred === true`. Each box: workstream ID (WS-XX) + star + Effort + ROI pills + serif title + body + Owner + Window. WS-08 gets the forest-gradient treatment as the strategic anchor. Layout is **`grid-template-columns:repeat(4,1fr)` — single row**, not a 2 × 2 grid. | The 4 starred workstreams per client | Platform shows full workstream list with filter; PDF crystallises to the top 4 starred. |
+| 31 | Crawl · Walk · Run Strategy (R6) | content · dynamic | `Crawl · Walk · Run Strategy.` Three columns (Days 1-90 / 90-180 / 180+) with bullets per phase | `RILEY_R6.crawl_walk_run`. Each column gradient: Crawl emerald → mint, Walk emerald → darkGreen, Run forest. | All bullets per phase | Identical |
+| 32 | Key Areas of Focus · 24-Month Timeline (R8) | content · dynamic | Breadcrumb `Crawl, Walk, Run Strategy`. H1 `Key areas of focus · 24-month timeline.` | `RILEY_R8.timeline`. 9 swimlanes (WS-01 → WS-08 + Global playbook) plotted across 8 quarters (Q1-Q4 FY26 + H1-H2 FY27 + FY28). Bars colour-coded by priority (red high / amber medium / emerald low / gradient = sustained). **Row padding 3.5mm + bar height 5mm + bar label 7.5pt** so the 9 swimlanes spread evenly down the page. | Per-WS bar placement + label | Identical |
+| 33 | Closing / Thank you | cover · static | Gradient bleed with closing message + HockeyStick logo + ABN | Static text. Same gradient as the cover. | None | Identical |
 
 ---
 
@@ -160,10 +166,10 @@ This is the final agenda section. **Key Areas of Focus is the last page inside t
 **Pure static pages** (same content every engagement):
 - 03 Framework
 - 04 HockeyStick Vision + Client roster
-- 07 / 19 / 24 / 28 Dividers
+- 07 / 19 / 25 / 29 Dividers (shifted +1 from page 22 onwards due to GTM split)
 - 09 Partner Categories matrix
 - 10 GTM Models Are Shifting + Jay McBain
-- 32 Closing
+- 33 Closing
 
 **Per-engagement dynamic** (read from platform):
 - 01 Cover (client name + logo + phase)
@@ -178,16 +184,16 @@ This is the final agenda section. **Key Areas of Focus is the last page inside t
 - 15 Customer journey (Alex A4)
 - 16-18 Mapping Partners to the Customer Journey · ICP 1/2/3 (Alex A2 top-3 categories)
 - 20 Competitor Analysis (Alex A6)
-- 21 GTM Channels · Yr 1 + Yr 2 (Riley R2 v4.1)
-- 22 Bottom-Up Partnership Model · two pyramids side by side (Riley R4 · Yr 1 + Yr 2)
-- 23 Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4)
-- 23 Category view + Reconciliation (Riley R4 Category view + R3 reconciliation)
-- 25 What we want from partners (Alex A9)
-- 26 What we offer partners (Alex A11)
-- 27 Partnership inputs + outputs (Alex A10)
-- 29 Key Workstreams (Riley R5 starred)
-- 30 Crawl · Walk · Run Strategy (Riley R6)
-- 31 24-Month Timeline (Riley R8)
+- 21 Partnership Growth Model · Year 1 (Riley R2 v4.1)
+- 22 Partnership Growth Model · Year 2 (Riley R2 v4.1)
+- 23 Bottom-Up Partnership Model · two pyramids side by side (Riley R4 · Yr 1 + Yr 2)
+- 24 Category view + Reconciliation · Yr 1 + Yr 2 (Riley R4 v6.2.4)
+- 26 What we want from partners (Alex A9)
+- 27 What we offer partners (Alex A11)
+- 28 Partnership inputs + outputs (Alex A10)
+- 30 Key Workstreams (Riley R5 starred)
+- 31 Crawl · Walk · Run Strategy (Riley R6)
+- 32 24-Month Timeline (Riley R8)
 
 ---
 
@@ -198,13 +204,13 @@ Most pages are pixel-faithful to the in-app view. The exceptions, where the PDF 
 | Page | In-app form | PDF form | Why |
 |---|---|---|---|
 | 08 Ecosystem Map | Interactive radial canvas with drag-able nodes | Server-side PNG snapshot rendered at canvas resolution | Static medium; readers need a frozen frame |
-| 21 GTM Channels Top-Down | Editable Yr 1 + Yr 2 worksheet (R2 v4.1) with amber inputs + Expected Partnership Revenue tiles | Read-only 4-card grid with per-card Yr 1 + Yr 2 inner columns (7 rows each) + single Revenue Mix card with Yr 1 + Yr 2 bars stacked + shared categories | Both years simultaneously visible in the static PDF (no toggle available) |
-| 22 Bottom-Up pyramid | Interactive pyramid with Yr 1 / Yr 2 toggle | Two pyramids side by side (Yr 1 emerald left · Yr 2 forest right), 6 layers each with emerald connectors | Both years visible at once; no toggle in static output |
-| 23 Reconciliation | Year-toggled category cards + reconciliation table (R4 v6.2.4) | Two side-by-side category-view grids (8 cards each, 2-col layout) above two side-by-side reconciliation tables (4 rows each) | Yr 1 + Yr 2 comparison without interaction |
-| 23 Category view + Reconciliation | Two separate Riley R4 tabs | Single combined page (category strip + reconciliation table) | One-stop business-case page |
-| 25 What we want from partners | Wide matrix with full-text pills per cell | Compact pills (font 7.5pt, gap 1mm, pill padding 1mm × 2mm) | Fit 3 rows × 5 stages onto one A4 landscape |
-| 26 What we offer partners | Same as above | Same compact pattern | Same |
-| 29 Key Workstreams | Full workstream list with filter | Top 4 starred only, 1 × 4 horizontal row | Executive focus |
+| 21 Partnership Growth Model · Yr 1 | Editable Yr 1 + Yr 2 worksheet (R2 v4.1) with year toggle, amber inputs + Expected Partnership Revenue tiles | Year 1 only on this page — single Expected Rev tile, 4 channel cards (2-col label/value), single Revenue Mix bar, shared categories grid | Year toggle isn't possible in print; one year per page keeps card detail readable |
+| 22 Partnership Growth Model · Yr 2 | Same R2 worksheet, Yr 2 toggle | Year 2 only — same layout as page 21, forest accent | As above |
+| 23 Bottom-Up pyramid | Interactive pyramid with Yr 1 / Yr 2 toggle | Two pyramids side by side (Yr 1 emerald left · Yr 2 forest right), 6 layers each with emerald connectors (tightened paddings + font sizes 24/06/2026) | Both years visible at once; no toggle in static output |
+| 24 Category view + Reconciliation | Two separate Riley R4 tabs (Year toggle) | Top: side-by-side category-view grids (8 cards each, 2-col layout, tightened sizing 24/06/2026); bottom: side-by-side reconciliation tables (4 rows each) | Yr 1 + Yr 2 comparison without interaction |
+| 26 What we want from partners | Wide matrix with full-text pills per cell | Compact pills (font 7.5pt, gap 1mm, pill padding 1mm × 2mm) | Fit 3 rows × 5 stages onto one A4 landscape |
+| 27 What we offer partners | Same as above | Same compact pattern | Same |
+| 30 Key Workstreams | Full workstream list with filter | Top 4 starred only, 1 × 4 horizontal row | Executive focus |
 
 ---
 
@@ -229,13 +235,13 @@ Per-engagement values pulled from the engagement record:
 | Alex A3 cohort metrics | Page 13 charts + missed revenue | (per engagement) |
 | Alex A4 customer journey × partner types | Page 15 grid | (per engagement) |
 | Alex A6 competitor matrix | Page 20 matrix | (per engagement) |
-| Alex A9/A10/A11 | Pages 25/26/27 | (per engagement) |
+| Alex A9/A10/A11 | Pages 26/27/28 | (per engagement) |
 | Riley R1 strategy answers | Page 14 5-question | (per engagement) |
-| Riley R2 channel mix + Category view | Page 21 | (per engagement) |
-| Riley R4 driver totals | Page 22 pyramid + Page 23 category + reconciliation | (per engagement) |
-| Riley R5 starred workstreams | Page 29 4-box | (per engagement) |
-| Riley R6 Crawl-Walk-Run | Page 30 | (per engagement) |
-| Riley R8 24-month timeline | Page 31 | (per engagement) |
+| Riley R2 channel mix + Category view (Yr 1 + Yr 2) | Pages 21 + 22 (one per year) | (per engagement) |
+| Riley R4 driver totals | Page 23 pyramid + Page 24 category + reconciliation | (per engagement) |
+| Riley R5 starred workstreams | Page 30 4-box | (per engagement) |
+| Riley R6 Crawl-Walk-Run | Page 31 | (per engagement) |
+| Riley R8 24-month timeline | Page 32 | (per engagement) |
 
 Branding stays constant — HockeyStick logos + colour tokens + Work Sans (single-family, brand-spec weights/tracking) since 24/06/2026.
 
@@ -257,9 +263,13 @@ chrome --headless=new --no-pdf-header-footer --no-margins \
 
 ---
 
-## 8 · Acceptance criteria (v4)
+## 8 · Acceptance criteria (v9)
 
-- [x] 32 pages total; sequential page numbers `NN of 32` in document order
+- [x] 33 pages total (24/06/2026 — GTM Channels split per year); sequential page numbers `NN of 33` in document order
+- [x] Page 14 (Where to play, how to win) fits all 5 cards on one page without overflow under the new Light-300 body weight
+- [x] Page 21/22 retitled `Partnership Growth Model · Year 1` / `Year 2`, with the new top-down growth-model subtitle
+- [x] Page 23 Bottom-Up pyramids (two side by side) fit without bottom-edge clipping
+- [x] Page 24 Category view + Reconciliation fits two years × eight category cards × two reconciliation tables without clipping
 - [x] All breadcrumbs (`.pageheader-eyebrow`) carry section name only — no leading number
 - [x] Cover: 'Strictly Private & Confidential' sits in a footer strip
 - [x] Framework chart dotted dividers sit between bars (boundary 6/15 + 9/15) and end at the bar base
