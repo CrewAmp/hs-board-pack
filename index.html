@@ -16,8 +16,8 @@
   }
   *,*::before,*::after{box-sizing:border-box;}
   html,body{margin:0;padding:0;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  body{font-family:'Work Sans',system-ui,sans-serif;color:var(--text);}
-  .serif{font-family:'Work Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-0.4px;}
+  body{font-family:'Work Sans',system-ui,sans-serif;font-weight:300;letter-spacing:0;color:var(--text);}
+  .serif{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;letter-spacing:-0.02em;}
   .mono{font-family:'SF Mono','Consolas',monospace;}
 
   .page{width:338.67mm;height:190.5mm;position:relative;overflow:hidden;background:#fff;page-break-after:always;break-after:page;}
@@ -48,7 +48,7 @@
   .cover-mid{flex:1;display:flex;flex-direction:column;justify-content:center;}
   .cover-eyebrow{color:#86EFAC;font-size:10pt;letter-spacing:3px;text-transform:uppercase;font-weight:800;}
   .cover-rule{width:24mm;height:1.5mm;background:var(--emerald);margin:6mm 0 8mm;}
-  .cover-title{font-family:'Work Sans',system-ui,sans-serif;font-size:74pt;line-height:0.95;letter-spacing:-2.2px;color:#fff;max-width:240mm;}
+  .cover-title{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:74pt;line-height:0.95;letter-spacing:-0.02em;color:#fff;max-width:240mm;}
   .cover-sub{color:#C4D9D2;font-size:14pt;margin-top:10mm;line-height:1.55;max-width:200mm;}
   .cover-sub strong{color:#fff;font-weight:600;}
   .cover-bottom{display:flex;justify-content:space-between;align-items:flex-end;}
@@ -58,8 +58,8 @@
 
   .div-inner{padding:30mm 36mm;height:100%;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1;}
   .div-eyebrow{color:#86EFAC;font-size:10pt;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;margin-bottom:6mm;}
-  .div-num{font-family:'Work Sans',system-ui,sans-serif;font-size:200pt;color:var(--emerald);line-height:0.85;letter-spacing:-6px;margin-bottom:4mm;}
-  .div-title{font-family:'Work Sans',system-ui,sans-serif;font-size:80pt;color:#fff;line-height:0.95;letter-spacing:-2.5px;}
+  .div-num{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:200pt;color:var(--emerald);line-height:0.85;letter-spacing:-0.02em;margin-bottom:4mm;}
+  .div-title{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:80pt;color:#fff;line-height:0.95;letter-spacing:-0.02em;}
   .div-foot{position:absolute;left:0;right:0;bottom:0;padding:7mm 18mm;border-top:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:space-between;z-index:1;}
   .div-foot-hs{display:flex;align-items:center;gap:3mm;}
   .div-foot-hs img{height:5mm;}
@@ -73,10 +73,10 @@
   .pageheader-client{display:flex;align-items:center;gap:4mm;font-size:7.5pt;color:var(--textMuted);letter-spacing:1.2px;text-transform:uppercase;font-weight:700;}
   .pageheader-client img{height:4.5mm;width:auto;flex-shrink:0;max-width:42mm;object-fit:contain;}
 
-  .h1{font-family:'Work Sans',system-ui,sans-serif;font-size:24pt;line-height:1.08;letter-spacing:-0.6px;color:var(--text);flex-shrink:0;}
+  .h1{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:24pt;line-height:1.1;letter-spacing:-0.02em;color:var(--text);flex-shrink:0;}
   .h1 .accent{color:var(--darkGreen);}
   .h1 .em{color:var(--emerald);}
-  .lede{font-size:9.5pt;color:var(--textSec);margin-top:2mm;max-width:220mm;line-height:1.45;flex-shrink:0;}
+  .lede{font-family:'Work Sans',system-ui,sans-serif;font-weight:300;letter-spacing:-0.04em;font-size:9.5pt;color:var(--textSec);margin-top:2mm;max-width:220mm;line-height:1.45;flex-shrink:0;}
 
   /* ── HERO STRIP pattern (Sam D3/D4 style) ── */
   /* Hero strip mirrors the cover gradient so the dark→bright green ladder is consistent across the deck. */
@@ -87,7 +87,7 @@
   /* ── KPI/STAT TILES (white card on surface) ── */
   .stat-card{background:#fff;border:1px solid var(--border);border-radius:4mm;padding:6mm 7mm;}
   .stat-eyebrow{font-size:7.5pt;color:var(--textMuted);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;}
-  .stat-value{font-family:'Work Sans',system-ui,sans-serif;font-size:32pt;color:var(--text);line-height:1;letter-spacing:-0.8px;margin-top:2mm;}
+  .stat-value{font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:32pt;color:var(--text);line-height:1;letter-spacing:-0.02em;margin-top:2mm;}
   .stat-sub{font-size:9pt;color:var(--textMuted);margin-top:2mm;line-height:1.45;}
 
   .pill{display:inline-block;padding:1.5mm 4mm;border-radius:99px;font-size:8.5pt;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;}
@@ -111,7 +111,7 @@
         <div class="cover-eyebrow">Partnership Revenue Intelligence</div>
         <div class="cover-rule"></div>
         <div class="cover-title">Partnership Strategy<br>Playbook.</div>
-        <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:32pt;color:#86EFAC;letter-spacing:-0.8px;line-height:1.1;margin-top:12mm;font-style:italic;">Align Phase.</div>
+        <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:32pt;color:#86EFAC;letter-spacing:-0.8px;line-height:1.1;margin-top:12mm;font-style:italic;">Align Phase.</div>
         <div class="cover-sub" style="margin-top:14mm;">Prepared by <strong>HockeyStick Advisory</strong> for <strong>SafetyCulture</strong>. The culmination of the Align Phase workshop, the opportunity mapping pass, and the business alignment build &mdash; ready for executive sign-off and the board.</div>
       </div>
       <!-- Footer strip on the cover with confidential line -->
@@ -138,11 +138,11 @@
         </div>
         <!-- Each entry uses a consistent type rhythm: 42pt serif number, 15pt sans title, 9.5pt sentence-case sub. Body font (Work Sans) inherited from <body> so the rendering matches every other page. -->
         <div style="display:flex;flex-direction:column;gap:4mm;">
-          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">01</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">Vision</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Partnership vision &middot; What&rsquo;s possible through partnerships</div></div></div>
-          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">02</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">The Role of Partnerships</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Ecosystem map &middot; Maturity &middot; Readiness &middot; Strategy &middot; Customer journey</div></div></div>
-          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">03</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">The Commercial Impact of Partnerships</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Competitor analysis &middot; GTM channels &middot; Bottom-up model &middot; Reconciliation</div></div></div>
-          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">04</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">How to Win</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">What we want from partners &middot; What we offer &middot; Inputs + outputs</div></div></div>
-          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">05</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">Crawl, Walk, Run</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Four starred workstreams &middot; Crawl-Walk-Run cadence &middot; Key areas of focus &middot; 24-month timeline</div></div></div>
+          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">01</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">Vision</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Partnership vision &middot; What&rsquo;s possible through partnerships</div></div></div>
+          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">02</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">The Role of Partnerships</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Ecosystem map &middot; Maturity &middot; Readiness &middot; Strategy &middot; Customer journey</div></div></div>
+          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">03</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">The Commercial Impact of Partnerships</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Competitor analysis &middot; GTM channels &middot; Bottom-up model &middot; Reconciliation</div></div></div>
+          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;border-bottom:1px solid var(--borderSoft);"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">04</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">How to Win</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">What we want from partners &middot; What we offer &middot; Inputs + outputs</div></div></div>
+          <div style="display:grid;grid-template-columns:30mm 1fr;gap:6mm;padding:4mm 0;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:42pt;color:var(--emerald);line-height:0.9;letter-spacing:-1.5px;">05</div><div><div style="font-size:15pt;color:var(--text);font-weight:600;line-height:1.2;">Crawl, Walk, Run</div><div style="font-size:9.5pt;color:var(--textSec);line-height:1.45;font-weight:500;margin-top:2mm;">Four starred workstreams &middot; Crawl-Walk-Run cadence &middot; Key areas of focus &middot; 24-month timeline</div></div></div>
         </div>
       </div>
     </div>
@@ -392,7 +392,7 @@
           <div style="position:absolute;bottom:-30mm;left:-20mm;width:120mm;height:120mm;border-radius:50%;background:radial-gradient(circle,rgba(0,0,0,0.20),transparent 65%);"></div>
           <div style="position:relative;z-index:1;">
             <div style="font-size:9pt;color:#86EFAC;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;">Closeable partner-revenue gap &middot; 18 months</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:88pt;line-height:0.9;letter-spacing:-3px;margin-top:6mm;">A$28.6M</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:88pt;line-height:0.9;letter-spacing:-3px;margin-top:6mm;">A$28.6M</div>
             <div style="font-size:11pt;color:#C4D9D2;margin-top:6mm;max-width:200mm;line-height:1.55;">Closing the gap from today's <strong style="color:#fff;">12%</strong> to the <strong style="color:#fff;">25%</strong> 18-month target unlocks A$28.6M of partner-sourced revenue not in the plan today.</div>
           </div>
         </div>
@@ -401,15 +401,15 @@
           <div style="font-family:'Work Sans',sans-serif;font-size:8.5pt;color:var(--textMuted);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">Partner-sourced revenue &middot; A$M</div>
           <div style="display:flex;flex-direction:column;gap:5mm;margin-top:7mm;flex:1;justify-content:center;">
             <div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);line-height:1;">Today &middot; 12%</div><div style="font-size:11pt;font-weight:800;color:var(--darkGreen);">A$26.4M</div></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);line-height:1;">Today &middot; 12%</div><div style="font-size:11pt;font-weight:800;color:var(--darkGreen);">A$26.4M</div></div>
               <div style="margin-top:2mm;height:8mm;background:var(--surface);border-radius:99px;overflow:hidden;"><div style="height:100%;width:40%;background:#A8D5BC;border-radius:99px;"></div></div>
             </div>
             <div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);line-height:1;">18-month target &middot; 25%</div><div style="font-size:11pt;font-weight:800;color:var(--darkGreen);">A$55.0M</div></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);line-height:1;">18-month target &middot; 25%</div><div style="font-size:11pt;font-weight:800;color:var(--darkGreen);">A$55.0M</div></div>
               <div style="margin-top:2mm;height:8mm;background:var(--surface);border-radius:99px;overflow:hidden;"><div style="height:100%;width:83.4%;background:#0E7663;border-radius:99px;"></div></div>
             </div>
             <div>
-              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);line-height:1;">Benchmark &middot; 30%</div><div style="font-size:11pt;font-weight:800;color:var(--emerald);">A$66.0M</div></div>
+              <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);line-height:1;">Benchmark &middot; 30%</div><div style="font-size:11pt;font-weight:800;color:var(--emerald);">A$66.0M</div></div>
               <div style="margin-top:2mm;height:8mm;background:var(--surface);border-radius:99px;overflow:hidden;"><div style="height:100%;width:100%;background:linear-gradient(90deg,#10B981,#0F3D2E);border-radius:99px;"></div></div>
             </div>
           </div>
@@ -562,16 +562,16 @@
         <div style="position:absolute;top:-30mm;right:-20mm;width:120mm;height:120mm;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,0.30),transparent 65%);"></div>
         <div style="position:relative;z-index:1;">
           <div style="font-size:8pt;color:#86EFAC;letter-spacing:2.2px;text-transform:uppercase;font-weight:800;">Ecosystem Maturity · Diagnostic Findings</div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:26pt;line-height:1.05;letter-spacing:-0.8px;color:#fff;margin-top:2mm;">SafetyCulture is <span style="color:#F59E0B;">Developing</span> on the partnership ecosystem maturity scale.</div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:26pt;line-height:1.05;letter-spacing:-0.8px;color:#fff;margin-top:2mm;">SafetyCulture is <span style="color:#F59E0B;">Developing</span> on the partnership ecosystem maturity scale.</div>
           <div style="font-size:9.5pt;color:#C4D9D2;line-height:1.45;margin-top:2mm;">Composite <strong style="color:#fff;">2.1 / 5.0</strong> · benchmark <strong style="color:#fff;">4.0</strong> for Late-Stage / Pre-IPO programmes (−1.9). Align-phase work will compound.</div>
         </div>
         <div style="background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.10);border-radius:4mm;padding:4mm 6mm;position:relative;z-index:1;">
           <div style="font-size:7.5pt;color:#86EFAC;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;">Composite</div>
-          <div style="display:flex;align-items:baseline;gap:2mm;margin-top:1mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:36pt;line-height:0.95;letter-spacing:-1.5px;color:#fff;">2.1</div><div style="font-size:13pt;color:#B8D4CD;">/ 5.0</div></div>
+          <div style="display:flex;align-items:baseline;gap:2mm;margin-top:1mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:36pt;line-height:0.95;letter-spacing:-1.5px;color:#fff;">2.1</div><div style="font-size:13pt;color:#B8D4CD;">/ 5.0</div></div>
         </div>
         <div style="background:rgba(245,158,11,0.18);border:1px solid rgba(245,158,11,0.45);border-radius:4mm;padding:4mm 6mm;position:relative;z-index:1;">
           <div style="font-size:7.5pt;color:#FCD980;letter-spacing:1.8px;text-transform:uppercase;font-weight:800;">Classification</div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:22pt;line-height:1;letter-spacing:-0.5px;color:#fff;margin-top:1mm;">Developing</div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:22pt;line-height:1;letter-spacing:-0.5px;color:#fff;margin-top:1mm;">Developing</div>
           <div style="font-size:8pt;color:#FCD980;margin-top:1mm;">1.5 – 2.5 band</div>
         </div>
       </div>
@@ -621,13 +621,13 @@
         <div style="display:flex;flex-direction:column;">
           <div style="font-size:7.5pt;color:var(--textMuted);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;margin-bottom:2mm;">Score by dimension · sorted worst-first</div>
           <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;font-size:7pt;color:var(--textMuted);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;padding:0 3mm 1mm;border-bottom:1.5px solid var(--border);"><div>Dimension</div><div style="text-align:right;">Score</div><div style="text-align:right;">Benchmark</div><div style="text-align:right;">Delta</div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;background:#FEE2E2;border-left:3px solid #DC2626;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Revenue Attribution</div><div style="font-size:7.5pt;color:var(--textMuted);">Sourced + influenced tracking</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:#DC2626;letter-spacing:-0.3px;">1.4</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.0</div><div style="text-align:right;"><span class="pill pill-red" style="font-size:7pt;padding:1mm 3mm;">-2.6</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;background:#FEF3C7;border-left:3px solid #F59E0B;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Operational Infrastructure</div><div style="font-size:7.5pt;color:var(--textMuted);">PRM · CRM · RevOps · enablement</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:#92400E;letter-spacing:-0.3px;">1.8</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-2.5</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Ecosystem Coverage</div><div style="font-size:7.5pt;color:var(--textMuted);">Partner base breadth + activation</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.2</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.4</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-2.2</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">GTM Integration</div><div style="font-size:7.5pt;color:var(--textMuted);">Partners in the sales motion</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.4</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.0</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Executive Commitment</div><div style="font-size:7.5pt;color:var(--textMuted);">Sponsor · reporting line · budget</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.6</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.2</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Product &amp; Integration</div><div style="font-size:7.5pt;color:var(--textMuted);">API · integrations · marketplace</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.7</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
-          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Partnership Strategy Maturity</div><div style="font-size:7.5pt;color:var(--textMuted);">Documented strategy + motion</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">3.1</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill" style="font-size:7pt;padding:1mm 3mm;background:#FFE2C2;color:#92400E;">-1.2</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;background:#FEE2E2;border-left:3px solid #DC2626;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Revenue Attribution</div><div style="font-size:7.5pt;color:var(--textMuted);">Sourced + influenced tracking</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:#DC2626;letter-spacing:-0.3px;">1.4</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.0</div><div style="text-align:right;"><span class="pill pill-red" style="font-size:7pt;padding:1mm 3mm;">-2.6</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;background:#FEF3C7;border-left:3px solid #F59E0B;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Operational Infrastructure</div><div style="font-size:7.5pt;color:var(--textMuted);">PRM · CRM · RevOps · enablement</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:#92400E;letter-spacing:-0.3px;">1.8</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-2.5</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Ecosystem Coverage</div><div style="font-size:7.5pt;color:var(--textMuted);">Partner base breadth + activation</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.2</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.4</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-2.2</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">GTM Integration</div><div style="font-size:7.5pt;color:var(--textMuted);">Partners in the sales motion</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.4</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.0</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Executive Commitment</div><div style="font-size:7.5pt;color:var(--textMuted);">Sponsor · reporting line · budget</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.6</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.2</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;border-bottom:1px solid var(--borderSoft);align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Product &amp; Integration</div><div style="font-size:7.5pt;color:var(--textMuted);">API · integrations · marketplace</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">2.7</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill pill-amber" style="font-size:7pt;padding:1mm 3mm;">-1.6</span></div></div>
+          <div style="display:grid;grid-template-columns:1fr 22mm 22mm 22mm;padding:2mm 3mm;align-items:center;"><div><div style="font-size:9.5pt;font-weight:700;color:var(--text);">Partnership Strategy Maturity</div><div style="font-size:7.5pt;color:var(--textMuted);">Documented strategy + motion</div></div><div style="text-align:right;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--text);letter-spacing:-0.3px;">3.1</div><div style="text-align:right;font-size:9pt;color:var(--textSec);font-weight:600;">4.3</div><div style="text-align:right;"><span class="pill" style="font-size:7pt;padding:1mm 3mm;background:#FFE2C2;color:#92400E;">-1.2</span></div></div>
         </div>
       </div>
     </div>
@@ -658,14 +658,14 @@
               <circle cx="80" cy="80" r="62" stroke="#F59E0B" stroke-width="10" fill="none" stroke-dasharray="261.0 389.6" stroke-linecap="round"/>
             </svg>
             <div style="position:relative;z-index:1;text-align:center;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:30pt;line-height:1;letter-spacing:-1px;color:#fff;">67<span style="font-size:12pt;color:#C4D9D2;">%</span></div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:30pt;line-height:1;letter-spacing:-1px;color:#fff;">67<span style="font-size:12pt;color:#C4D9D2;">%</span></div>
               <div style="font-size:7pt;color:#86EFAC;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;margin-top:1mm;">Readiness</div>
             </div>
           </div>
           <!-- Mid -->
           <div>
             <div style="font-size:9pt;color:#86EFAC;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;">Partnership Readiness · Diagnostic</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:32pt;line-height:1.08;letter-spacing:-1px;color:#fff;margin-top:5mm;">SafetyCulture is <span style="color:#F59E0B;">Amber</span> across 3 of 7 readiness categories.</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:32pt;line-height:1.08;letter-spacing:-1px;color:#fff;margin-top:5mm;">SafetyCulture is <span style="color:#F59E0B;">Amber</span> across 3 of 7 readiness categories.</div>
             <!-- RAG segment bar -->
             <div style="display:flex;gap:1.5mm;margin-top:6mm;height:3mm;">
               <div style="width:14.3%;background:#DC2626;border-radius:99px;"></div>
@@ -684,43 +684,43 @@
       <!-- 7-pillar cards -->
       <div style="margin-top:5mm;display:grid;grid-template-columns:repeat(7,1fr);gap:3mm;">
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #F59E0B;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">People</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#B45309;line-height:1;">2.5</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">People</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#B45309;line-height:1;">2.5</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:50%;background:#F59E0B;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Right team, structure and seniority.</strong> Partner team headcount, RevOps support and exec sponsor seniority. Weak score means activation outpaces delivery.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#FEF3C7;color:#92400E;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Amber</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">2 blockers</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #10B981;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Process</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#047857;line-height:1;">4.1</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Process</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#047857;line-height:1;">4.1</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:82%;background:#10B981;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Repeatable mechanics across the engagement.</strong> Playbooks, deal-reg flows, attribution rules and joint-motion templates. Strong score means partner work is operational, not artisanal.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#D1FAE5;color:#065F46;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Green</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">0 blockers</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #10B981;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Programs</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#047857;line-height:1;">3.8</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Programs</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#047857;line-height:1;">3.8</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:76%;background:#10B981;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Formal partner-program structure.</strong> Tiering, certifications, MDF and commercials per category. Strong score means each category has a defined incentive shape.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#D1FAE5;color:#065F46;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Green</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">1 blocker</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #DC2626;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Technology</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#991B1B;line-height:1;">1.6</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Technology</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#991B1B;line-height:1;">1.6</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:32%;background:#DC2626;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Systems and accessibility for partners.</strong> PRM, CRM partner-attribution fields and integration plumbing. Weak score blocks every other pillar &mdash; partners cannot transact at scale.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#FEE2E2;color:#991B1B;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Red</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">3 blockers</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #F59E0B;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Data</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#B45309;line-height:1;">2.8</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Data</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#B45309;line-height:1;">2.8</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:56%;background:#F59E0B;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Partner activity tracking + attribution.</strong> Sourced + influenced revenue, partner scorecards, dashboards. Weak score means partners cannot be measured or rewarded.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#FEF3C7;color:#92400E;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Amber</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">2 blockers</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #F59E0B;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Budget</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#B45309;line-height:1;">2.4</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);">Budget</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#B45309;line-height:1;">2.4</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:48%;background:#F59E0B;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Funding protocol + MDF envelope.</strong> Joint marketing dollars, co-sell incentives, partner-manager headcount. Strong score frees the team to invest into activation.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#FEF3C7;color:#92400E;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Amber</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">1 blocker</div></div>
         </div>
         <div style="background:#fff;border:1px solid var(--border);border-top:3px solid #10B981;border-radius:0 0 3mm 3mm;padding:4mm 4mm 3.5mm;">
-          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);white-space:nowrap;">Exec&nbsp;buy&#8209;in</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:#047857;line-height:1;">4.5</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;"><div style="font-size:9pt;font-weight:800;color:var(--text);white-space:nowrap;">Exec&nbsp;buy&#8209;in</div><div><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:#047857;line-height:1;">4.5</span><span style="font-size:8pt;color:var(--textMuted);font-weight:700;">/5</span></div></div>
           <div style="margin-top:2.5mm;height:2mm;background:rgba(0,0,0,0.06);border-radius:99px;overflow:hidden;"><div style="height:100%;width:90%;background:#10B981;border-radius:99px;"></div></div>
           <div style="margin-top:2.5mm;font-size:7pt;color:var(--textSec);line-height:1.4;"><strong style="color:var(--text);">Senior leadership ownership across the C-suite.</strong> Exec sponsor cadence, partnership at QBRs, board-level visibility. Strong makes partnerships an embedded priority.</div>
           <div style="margin-top:3mm;padding-top:2.5mm;border-top:1px solid var(--borderSoft);display:flex;flex-direction:column;align-items:flex-start;gap:1.2mm;"><span style="background:#D1FAE5;color:#065F46;font-size:6.5pt;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:0.8mm 2.5mm;border-radius:99px;">Green</span><div style="font-size:7.5pt;color:var(--textMuted);font-weight:600;">0 blockers</div></div>
@@ -806,7 +806,7 @@
         <div style="position:absolute;top:-30mm;right:-25mm;width:140mm;height:140mm;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.14),transparent 65%);"></div>
         <div style="position:relative;z-index:1;">
           <div style="font-size:8pt;color:#86EFAC;letter-spacing:2px;text-transform:uppercase;font-weight:800;">Annual missed revenue &middot; The commercial hook</div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:36pt;line-height:1;letter-spacing:-0.8px;margin-top:3mm;">$1.7M left on the table</div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:36pt;line-height:1;letter-spacing:-0.8px;margin-top:3mm;">$1.7M left on the table</div>
           <div style="font-size:10pt;color:#C4D9D2;line-height:1.6;margin-top:3mm;max-width:170mm;">Closing the gap from a 22% direct win rate to the 41% partner benchmark, applied to annual qualified opportunity volume and average annual contract value.</div>
         </div>
         <div style="background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.12);border-radius:3mm;padding:4mm 6mm;position:relative;z-index:1;">
@@ -840,35 +840,35 @@
         <div style="display:grid;grid-template-columns:75mm 1fr;background:#fff;border:1px solid var(--border);border-radius:3mm;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#10B981,#0F3D2E);color:#fff;padding:5mm 7mm;display:flex;flex-direction:column;justify-content:center;">
             <div style="font-size:8pt;color:rgba(255,255,255,0.7);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">01 &middot; Vision</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:16pt;line-height:1.12;margin-top:1mm;">What is our winning aspiration?</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:16pt;line-height:1.12;margin-top:1mm;">What is our winning aspiration?</div>
           </div>
           <div style="padding:5mm 8mm;display:flex;align-items:center;"><div style="font-size:10pt;color:var(--text);line-height:1.55;">Become the global standard frontline-operations platform for safety-critical industries, building a category-defining partner ecosystem that delivers 22% of new ARR by T+180 and 34% by Year 2, anchored on hyperscaler co-sell, Tier-1 GSI delivery, and an embedded ISV programme.</div></div>
         </div>
         <div style="display:grid;grid-template-columns:75mm 1fr;background:#fff;border:1px solid var(--border);border-radius:3mm;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#10B981,#0F3D2E);color:#fff;padding:5mm 7mm;display:flex;flex-direction:column;justify-content:center;">
             <div style="font-size:8pt;color:rgba(255,255,255,0.7);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">02 &middot; Play</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:16pt;line-height:1.12;margin-top:1mm;">Where will we play?</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:16pt;line-height:1.12;margin-top:1mm;">Where will we play?</div>
           </div>
           <div style="padding:5mm 8mm;display:flex;align-items:center;"><div style="font-size:10pt;color:var(--text);line-height:1.55;">Primary: ANZ + NAM enterprise frontline operations, scaled through Hyperscaler co-sell (Microsoft / AWS) and Tier-1 GSI delivery (Accenture / Deloitte / PwC). Secondary: embedded ISV motion across industrial IoT + EHS-adjacent platforms. Verticals: manufacturing, mining, construction, healthcare.</div></div>
         </div>
         <div style="display:grid;grid-template-columns:75mm 1fr;background:#fff;border:1px solid var(--border);border-radius:3mm;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#10B981,#0F3D2E);color:#fff;padding:5mm 7mm;display:flex;flex-direction:column;justify-content:center;">
             <div style="font-size:8pt;color:rgba(255,255,255,0.7);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">03 &middot; Win</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:16pt;line-height:1.12;margin-top:1mm;">How will we win in chosen markets?</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:16pt;line-height:1.12;margin-top:1mm;">How will we win in chosen markets?</div>
           </div>
           <div style="padding:5mm 8mm;display:flex;align-items:center;"><div style="font-size:10pt;color:var(--text);line-height:1.55;">Integrator-first GTM with named partner managers reporting into Revenue. Software-led differentiation through native integrations and a procurement-ready pricing track. Fast POCs anchored on Activation. Outcome bias: partner-influenced ARR plus joint reference logos every quarter.</div></div>
         </div>
         <div style="display:grid;grid-template-columns:75mm 1fr;background:#fff;border:1px solid var(--border);border-radius:3mm;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#10B981,#0F3D2E);color:#fff;padding:5mm 7mm;display:flex;flex-direction:column;justify-content:center;">
             <div style="font-size:8pt;color:rgba(255,255,255,0.7);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">04 &middot; Capabilities</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:16pt;line-height:1.12;margin-top:1mm;">What capabilities must we have?</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:16pt;line-height:1.12;margin-top:1mm;">What capabilities must we have?</div>
           </div>
           <div style="padding:5mm 8mm;display:flex;align-items:center;"><div style="font-size:10pt;color:var(--text);line-height:1.55;">Named Head of Partnerships reporting into the CRO. Dedicated RevOps embed for partner attribution and scorecard cadence. Certification programme for Sales + Partner Managers. C-Suite or President-level executive sponsor on the fortnightly partnership review.</div></div>
         </div>
         <div style="display:grid;grid-template-columns:75mm 1fr;background:#fff;border:1px solid var(--border);border-radius:3mm;overflow:hidden;">
           <div style="background:linear-gradient(135deg,#10B981,#0F3D2E);color:#fff;padding:5mm 7mm;display:flex;flex-direction:column;justify-content:center;">
             <div style="font-size:8pt;color:rgba(255,255,255,0.7);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">05 &middot; Systems</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:16pt;line-height:1.12;margin-top:1mm;">What management systems do we need?</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:16pt;line-height:1.12;margin-top:1mm;">What management systems do we need?</div>
           </div>
           <div style="padding:5mm 8mm;display:flex;align-items:center;"><div style="font-size:10pt;color:var(--text);line-height:1.55;">CRM partner-attribution fields and workflows. PRM (Crossbeam / PartnerStack) for deal registration and pipeline visibility. Centralised collateral hub for sales, technical, and marketing materials. Quarterly MDF envelope sized to the top 3 categories.</div></div>
         </div>
@@ -911,7 +911,7 @@
             <div style="padding:2mm 3mm;background:#fff;border:1px solid var(--border);border-radius:2mm;font-size:8.5pt;color:var(--text);font-weight:700;text-align:center;letter-spacing:0.3px;text-transform:uppercase;">Referral</div>
           </div>
           <div style="background:#D9347B;color:#fff;border-radius:3mm;padding:5mm;flex:1;display:flex;flex-direction:column;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 01</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 01</div>
             <div style="padding-top:3mm;margin-top:3mm;border-top:1px solid rgba(255,255,255,0.18);">
               <div style="font-size:7.5pt;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;opacity:0.7;">KPIs that move</div>
               <ul style="margin:2mm 0 0;padding-left:4mm;font-size:9pt;line-height:1.5;opacity:0.92;">
@@ -932,7 +932,7 @@
             <div style="padding:2mm 3mm;background:#fff;border:1px solid var(--border);border-radius:2mm;font-size:8.5pt;color:var(--text);font-weight:700;text-align:center;letter-spacing:0.3px;text-transform:uppercase;">Referral</div>
           </div>
           <div style="background:#6E4FAE;color:#fff;border-radius:3mm;padding:5mm;flex:1;display:flex;flex-direction:column;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 02</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 02</div>
             <div style="padding-top:3mm;margin-top:3mm;border-top:1px solid rgba(255,255,255,0.18);">
               <div style="font-size:7.5pt;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;opacity:0.7;">KPIs that move</div>
               <ul style="margin:2mm 0 0;padding-left:4mm;font-size:9pt;line-height:1.5;opacity:0.92;">
@@ -953,7 +953,7 @@
             <div style="padding:2mm 3mm;background:#fff;border:1px solid var(--border);border-radius:2mm;font-size:8.5pt;color:var(--text);font-weight:700;text-align:center;letter-spacing:0.3px;text-transform:uppercase;">Channel</div>
           </div>
           <div style="background:#1DAE9B;color:#fff;border-radius:3mm;padding:5mm;flex:1;display:flex;flex-direction:column;border:2px solid var(--emerald);box-shadow:0 6mm 14mm rgba(16,185,129,0.30);">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 03</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 03</div>
             <div style="padding-top:3mm;margin-top:3mm;border-top:1px solid rgba(255,255,255,0.18);">
               <div style="font-size:7.5pt;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;opacity:0.7;">KPIs that move</div>
               <ul style="margin:2mm 0 0;padding-left:4mm;font-size:9pt;line-height:1.5;opacity:0.92;">
@@ -976,7 +976,7 @@
             <div style="padding:2mm 3mm;background:#fff;border:1px solid var(--border);border-radius:2mm;font-size:8.5pt;color:var(--text);font-weight:700;text-align:center;letter-spacing:0.3px;text-transform:uppercase;">OEM</div>
           </div>
           <div style="background:#0E7663;color:#fff;border-radius:3mm;padding:5mm;flex:1;display:flex;flex-direction:column;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 04</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 04</div>
             <div style="padding-top:3mm;margin-top:3mm;border-top:1px solid rgba(255,255,255,0.18);">
               <div style="font-size:7.5pt;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;opacity:0.7;">KPIs that move</div>
               <ul style="margin:2mm 0 0;padding-left:4mm;font-size:9pt;line-height:1.5;opacity:0.92;">
@@ -997,7 +997,7 @@
             <div style="padding:2mm 3mm;background:#fff;border:1px solid var(--border);border-radius:2mm;font-size:8.5pt;color:var(--text);font-weight:700;text-align:center;letter-spacing:0.3px;text-transform:uppercase;">Channel</div>
           </div>
           <div style="background:#012D27;color:#fff;border-radius:3mm;padding:5mm;flex:1;display:flex;flex-direction:column;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 05</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;text-align:center;letter-spacing:-0.2px;">Stage 05</div>
             <div style="padding-top:3mm;margin-top:3mm;border-top:1px solid rgba(255,255,255,0.18);">
               <div style="font-size:7.5pt;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;opacity:0.7;">KPIs that move</div>
               <ul style="margin:2mm 0 0;padding-left:4mm;font-size:9pt;line-height:1.5;opacity:0.92;">
@@ -1030,8 +1030,8 @@
       <div style="font-size:9.5pt;color:var(--darkGreen);letter-spacing:2.4px;text-transform:uppercase;font-weight:800;margin-bottom:3mm;">Mapping Partners to the Customer Journey</div>
       <div class="h1">Technology &middot; <span class="accent">ISVs.</span></div>
       <div style="margin-top:4mm;padding:4mm 6mm;background:#FEF3C7;border-radius:3mm;display:flex;gap:6mm;align-items:center;">
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>Category:</strong> Technology &middot; ISVs</div>
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>native software integrations that deepen the SafetyCulture stack into customers' enterprise systems &mdash; Microsoft, Salesforce, Workday, ServiceNow, Slack.</em></div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>Category:</strong> Technology &middot; ISVs</div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>native software integrations that deepen the SafetyCulture stack into customers' enterprise systems &mdash; Microsoft, Salesforce, Workday, ServiceNow, Slack.</em></div>
       </div>
       <!-- 5 customer needs -->
       <div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:5mm;min-height:0;">
@@ -1040,7 +1040,7 @@
             <div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #1</div>
             <span style="font-size:11pt;color:var(--textMuted);">&#9734;</span>
           </div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Workflow consolidation</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Workflow consolidation</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Reduce app sprawl by surfacing inspection data inside Teams, Slack, Salesforce and ServiceNow.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
@@ -1048,7 +1048,7 @@
             <div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #2</div>
             <span style="font-size:11pt;color:var(--textMuted);">&#9734;</span>
           </div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Data flow + reporting</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Data flow + reporting</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Push inspection + incident records into the enterprise data warehouse and BI tooling (Power BI, Tableau).</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
@@ -1056,7 +1056,7 @@
             <div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #3</div>
             <span style="font-size:11pt;color:var(--textMuted);">&#9734;</span>
           </div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Identity + access control</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Identity + access control</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Enterprise SSO, SCIM provisioning, conditional access via the same identity provider.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
@@ -1064,13 +1064,13 @@
             <div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #4</div>
             <span style="font-size:11pt;color:var(--textMuted);">&#9734;</span>
           </div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Compliance automation</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Compliance automation</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Auto-route findings to GRC + ITSM platforms; align audit evidence with existing controls.</div>
         </div>
         <!-- KEY WEDGE card -->
         <div style="background:#FFF;border:2px solid var(--text);border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:11pt;color:var(--text);">Customer need #5</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:11pt;color:var(--text);">Customer need #5</div>
             <span style="font-size:11pt;color:#F59E0B;">&#9733;</span>
           </div>
           <div style="background:#FACC15;color:var(--text);font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;font-weight:600;">AI + analytics depth</div>
@@ -1096,32 +1096,32 @@
       <div style="font-size:9.5pt;color:var(--darkGreen);letter-spacing:2.4px;text-transform:uppercase;font-weight:800;margin-bottom:3mm;">Mapping Partners to the Customer Journey</div>
       <div class="h1">Strategic &middot; <span class="accent">Hyperscalers.</span></div>
       <div style="margin-top:4mm;padding:4mm 6mm;background:#FEF3C7;border-radius:3mm;display:flex;gap:6mm;align-items:center;">
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>Category:</strong> Strategic &middot; Hyperscalers</div>
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>industrial-IoT-grade cloud + AI platform with marketplace co-sell and procurement velocity for enterprise &mdash; AWS, Microsoft Azure, SAP, Oracle.</em></div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>Category:</strong> Strategic &middot; Hyperscalers</div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>industrial-IoT-grade cloud + AI platform with marketplace co-sell and procurement velocity for enterprise &mdash; AWS, Microsoft Azure, SAP, Oracle.</em></div>
       </div>
       <div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:5mm;min-height:0;">
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #1</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Procurement velocity</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Procurement velocity</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Hyperscaler marketplace co-sell compresses enterprise procurement cycles from 12 weeks to 2.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #2</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Reference architecture</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Reference architecture</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Joint reference architectures for industrial IoT, EHS, and regulated workloads on the customer's chosen cloud.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #3</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">AI-native roadmap</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">AI-native roadmap</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Copilot for Frontline Workers + Bedrock + S/4HANA integration. Co-built AI embedded in inspections.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #4</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Co-sell pipeline</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Co-sell pipeline</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Joint named-account targeting through Azure ISV / AWS Co-Sell / SAP ISA programmes.</div>
         </div>
         <div style="background:#FFF;border:2px solid var(--text);border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
-          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:11pt;color:var(--text);">Customer need #5</div><span style="font-size:11pt;color:#F59E0B;">&#9733;</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:11pt;color:var(--text);">Customer need #5</div><span style="font-size:11pt;color:#F59E0B;">&#9733;</span></div>
           <div style="background:#FACC15;color:var(--text);font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;font-weight:600;">Defensible moat</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Anchor on a hyperscaler's industry-vertical AI strategy. Competitors cannot rebuild SafetyCulture-native AI inside the customer's chosen cloud.</div>
         </div>
@@ -1145,32 +1145,32 @@
       <div style="font-size:9.5pt;color:var(--darkGreen);letter-spacing:2.4px;text-transform:uppercase;font-weight:800;margin-bottom:3mm;">Mapping Partners to the Customer Journey</div>
       <div class="h1">Channel &middot; <span class="accent">GSIs.</span></div>
       <div style="margin-top:4mm;padding:4mm 6mm;background:#FEF3C7;border-radius:3mm;display:flex;gap:6mm;align-items:center;">
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>Category:</strong> Channel &middot; GSIs</div>
-        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>Tier-1 implementation muscle, vertical-industry depth, and boardroom credibility for enterprise rollouts &mdash; Accenture, Deloitte, PwC, KPMG, EY.</em></div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>Category:</strong> Channel &middot; GSIs</div>
+        <div style="font-style:italic;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:13pt;color:var(--text);"><strong>|</strong> What this category brings to SafetyCulture: <em>Tier-1 implementation muscle, vertical-industry depth, and boardroom credibility for enterprise rollouts &mdash; Accenture, Deloitte, PwC, KPMG, EY.</em></div>
       </div>
       <div style="flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:4mm;margin-top:5mm;min-height:0;">
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #1</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Implementation capacity</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Implementation capacity</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Tier-1 GSI delivery muscle for enterprise rollouts SafetyCulture cannot service direct.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #2</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Vertical depth</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Vertical depth</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Industry practice depth across resources, healthcare, consumer for safety transformation.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #3</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Change management</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Change management</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Org-wide adoption frameworks for safety culture transformation alongside the platform deployment.</div>
         </div>
         <div style="background:#E7F4EA;border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
           <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-size:7pt;color:var(--darkGreen);letter-spacing:1.4px;text-transform:uppercase;font-weight:800;">Customer need #4</div><span style="font-size:11pt;color:var(--textMuted);">&#9734;</span></div>
-          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Boardroom credibility</div>
+          <div style="background:#2E8E72;color:#fff;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;">Boardroom credibility</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Tier-1 advisor signature unlocks the CFO + audit committee buyer in regulated industries.</div>
         </div>
         <div style="background:#FFF;border:2px solid var(--text);border-radius:4mm;padding:4mm 5mm;display:flex;flex-direction:column;gap:3mm;">
-          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:11pt;color:var(--text);">Customer need #5</div><span style="font-size:11pt;color:#F59E0B;">&#9733;</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:11pt;color:var(--text);">Customer need #5</div><span style="font-size:11pt;color:#F59E0B;">&#9733;</span></div>
           <div style="background:#FACC15;color:var(--text);font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;line-height:1.1;padding:5mm;border-radius:2mm;text-align:center;font-weight:600;">Geographic expansion</div>
           <div style="background:var(--deepGreen);color:#fff;border-radius:2mm;padding:4mm 5mm;font-size:8.5pt;line-height:1.45;flex:1;">Unblock international enterprise expansion (EMEA, AMER) through the GSIs' on-ground delivery capacity outside ANZ.</div>
         </div>
@@ -1202,21 +1202,21 @@
         <div style="background:#fff;border:1.5px solid var(--darkGreen);border-radius:3mm;padding:3mm 5mm;display:flex;align-items:center;gap:4mm;">
           <div style="width:8mm;height:8mm;border-radius:50%;background:var(--darkGreen);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11pt;flex-shrink:0;">1</div>
           <div style="flex:1;min-width:0;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Technology &middot; ISVs</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Technology &middot; ISVs</div>
             <div style="font-size:7.5pt;color:var(--textMuted);margin-top:0.8mm;">Microsoft &middot; Salesforce &middot; Workday &middot; ServiceNow &middot; Slack</div>
           </div>
         </div>
         <div style="background:#fff;border:1.5px solid var(--darkGreen);border-radius:3mm;padding:3mm 5mm;display:flex;align-items:center;gap:4mm;">
           <div style="width:8mm;height:8mm;border-radius:50%;background:var(--darkGreen);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11pt;flex-shrink:0;">2</div>
           <div style="flex:1;min-width:0;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Strategic &middot; Hyperscalers</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Strategic &middot; Hyperscalers</div>
             <div style="font-size:7.5pt;color:var(--textMuted);margin-top:0.8mm;">Microsoft &middot; AWS &middot; SAP &middot; Oracle</div>
           </div>
         </div>
         <div style="background:#fff;border:1.5px solid var(--darkGreen);border-radius:3mm;padding:3mm 5mm;display:flex;align-items:center;gap:4mm;">
           <div style="width:8mm;height:8mm;border-radius:50%;background:var(--darkGreen);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11pt;flex-shrink:0;">3</div>
           <div style="flex:1;min-width:0;">
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Channel &middot; GSIs</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:12pt;color:var(--text);line-height:1;letter-spacing:-0.2px;">Channel &middot; GSIs</div>
             <div style="font-size:7.5pt;color:var(--textMuted);margin-top:0.8mm;">Accenture &middot; Deloitte &middot; PwC &middot; KPMG &middot; EY</div>
           </div>
         </div>
@@ -1435,9 +1435,9 @@
           <div style="font-size:8.5pt;color:var(--darkGreen);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">Product-led growth</div>
           <div style="font-size:8.5pt;color:var(--text);line-height:1.45;margin-top:2mm;flex:1;">Self-serve trials convert to small-team purchases. Compounds with NPS and word-of-mouth.</div>
           <div style="display:flex;flex-direction:column;gap:2mm;margin-top:3mm;">
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">12.0k</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">18%</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">10%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">12.0k</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">18%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">10%</span></div>
           </div>
           <div style="margin-top:3mm;font-size:7.5pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Self-serve · Bottom-up · WOM</div>
         </div>
@@ -1445,9 +1445,9 @@
           <div style="font-size:8.5pt;color:var(--darkGreen);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">Marketing led</div>
           <div style="font-size:8.5pt;color:var(--text);line-height:1.45;margin-top:2mm;flex:1;">Content, paid, and events fill the sales pipeline with qualified opportunities.</div>
           <div style="display:flex;flex-direction:column;gap:2mm;margin-top:3mm;">
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">8.0k</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">35%</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">20%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">8.0k</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">35%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">20%</span></div>
           </div>
           <div style="margin-top:3mm;font-size:7.5pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Content · Paid · Events · ABM</div>
         </div>
@@ -1455,9 +1455,9 @@
           <div style="font-size:8.5pt;color:var(--darkGreen);letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">Sales led · outbound</div>
           <div style="font-size:8.5pt;color:var(--text);line-height:1.45;margin-top:2mm;flex:1;">Direct outbound into named enterprise accounts. Vertical-led campaigns.</div>
           <div style="display:flex;flex-direction:column;gap:2mm;margin-top:3mm;">
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">1.5k</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">22%</span></div>
-            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">40%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">1.5k</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">22%</span></div>
+            <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:var(--forest);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">40%</span></div>
           </div>
           <div style="margin-top:3mm;font-size:7.5pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Outbound · ABM · Vertical</div>
         </div>
@@ -1467,9 +1467,9 @@
             <div style="font-size:8.5pt;color:#86EFAC;letter-spacing:1.6px;text-transform:uppercase;font-weight:800;">Partner led ★</div>
             <div style="font-size:8.5pt;color:#fff;line-height:1.45;margin-top:2mm;flex:1;">Partners source and deliver. The compounding lever once activated. Targets the Crossbeam top-Q benchmark.</div>
             <div style="display:flex;flex-direction:column;gap:2mm;margin-top:3mm;">
-              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">3.5k</span></div>
-              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">25%</span></div>
-              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;line-height:1;">30%</span></div>
+              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">Leads</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">3.5k</span></div>
+              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Trials</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">25%</span></div>
+              <div style="display:flex;justify-content:space-between;padding:2mm 4mm;background:rgba(255,255,255,0.18);color:#fff;border-radius:2.5mm;align-items:center;"><span style="font-size:8pt;font-weight:700;letter-spacing:0.4px;text-transform:uppercase;">% Revenue</span><span style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;line-height:1;">30%</span></div>
             </div>
             <div style="margin-top:3mm;font-size:7.5pt;color:#86EFAC;letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">ISVs · Hyperscalers · GSIs</div>
           </div>
@@ -1498,72 +1498,72 @@
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Technology</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">30%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">30%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">25%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">25%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Strategic</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">25%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">25%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">20%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">20%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Channel</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">15%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">15%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">15%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">15%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Referral</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">10%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">10%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">12%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">12%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Reseller</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">8%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">8%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">8%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">8%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Affiliate</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">4%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">4%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">10%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">10%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">Marketplace</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">5%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">5%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">7%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">7%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
           <div style="background:rgba(16,185,129,0.10);border:1px solid #C8E5DC;border-top:3px solid var(--darkGreen);border-radius:2.5mm;padding:3mm 3mm;display:flex;flex-direction:column;justify-content:space-between;text-align:center;">
             <div style="font-size:7.5pt;color:var(--darkGreen);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;line-height:1.15;">OEM</div>
             <div style="display:flex;flex-direction:column;gap:1mm;margin-top:2mm;">
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:18pt;color:var(--forest);line-height:1;">3%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:18pt;color:var(--forest);line-height:1;">3%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Revenue</div>
-              <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">3%</div>
+              <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;color:var(--darkGreen);line-height:1;margin-top:1.5mm;">3%</div>
               <div style="font-size:7pt;color:var(--textMuted);letter-spacing:0.6px;text-transform:uppercase;font-weight:700;">Leads</div>
             </div>
           </div>
@@ -1614,7 +1614,7 @@
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
-            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-size:20pt;letter-spacing:-0.6px;">21</div>
+            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:20pt;letter-spacing:-0.6px;">21</div>
           </div>
           <!-- Smartsheet -->
           <div style="display:grid;grid-template-columns:50mm repeat(7,1fr) 32mm;gap:3mm;align-items:center;">
@@ -1626,7 +1626,7 @@
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
-            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-size:20pt;letter-spacing:-0.6px;">21</div>
+            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:20pt;letter-spacing:-0.6px;">21</div>
           </div>
           <!-- Monday.com -->
           <div style="display:grid;grid-template-columns:50mm repeat(7,1fr) 32mm;gap:3mm;align-items:center;">
@@ -1638,7 +1638,7 @@
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
             <div style="background:#FFF4B8;color:#7C2D12;padding:4mm 0;border-radius:2.5mm;text-align:center;font-size:14pt;font-weight:800;">3</div>
-            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-size:20pt;letter-spacing:-0.6px;">21</div>
+            <div style="background:var(--deepGreen);color:#fff;padding:4mm 0;border-radius:2.5mm;text-align:center;font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:20pt;letter-spacing:-0.6px;">21</div>
           </div>
         </div>
         <!-- Legend -->
@@ -2199,22 +2199,22 @@
       <div style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:4mm;min-height:0;">
         <!-- WS-01 -->
         <div style="background:#fff;border:1px solid var(--border);border-radius:3mm;padding:5mm 6mm;display:flex;flex-direction:column;position:relative;overflow:hidden;">
-          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-01</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-red" style="font-size:7pt;padding:0.8mm 3mm;">Effort · High</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Stand up the partnerships function</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-01</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-red" style="font-size:7pt;padding:0.8mm 3mm;">Effort · High</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Stand up the partnerships function</div>
           <div style="font-size:9pt;color:var(--textSec);line-height:1.45;margin-top:2mm;flex:1;">Name a Head of Partnerships reporting into Revenue. Stand up the RevOps embed for partner attribution. Set fortnightly executive partnership review cadence.</div>
           <div style="margin-top:3mm;padding-top:3mm;border-top:1px solid var(--borderSoft);display:flex;gap:6mm;"><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Owner</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Alex Chen · CRO</div></div><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Window</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Day 0 → Day 28</div></div></div>
         </div>
         <!-- WS-02 -->
         <div style="background:#fff;border:1px solid var(--border);border-radius:3mm;padding:5mm 6mm;display:flex;flex-direction:column;">
-          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-02</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-red" style="font-size:7pt;padding:0.8mm 3mm;">Effort · High</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Activate top 12 priority partners</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-02</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-red" style="font-size:7pt;padding:0.8mm 3mm;">Effort · High</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Activate top 12 priority partners</div>
           <div style="font-size:9pt;color:var(--textSec);line-height:1.45;margin-top:2mm;flex:1;">Per-partner activation kit across Q1/Q2: champion, contract paper, joint motion, T+30/T+90 success criteria. Scope: Microsoft, AWS, Salesforce, Workday, ServiceNow, Accenture, Deloitte, PwC + 4 more.</div>
           <div style="margin-top:3mm;padding-top:3mm;border-top:1px solid var(--borderSoft);display:flex;gap:6mm;"><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Owner</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Priya Singh · Head of Partnerships</div></div><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Window</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Day 28 → Day 75</div></div></div>
         </div>
         <!-- WS-03 -->
         <div style="background:#fff;border:1px solid var(--border);border-radius:3mm;padding:5mm 6mm;display:flex;flex-direction:column;">
-          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-03</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-amber" style="font-size:7pt;padding:0.8mm 3mm;">Effort · Med</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
-          <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Lock executive alignment + targets</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:28pt;color:var(--emerald);line-height:0.9;letter-spacing:-0.8px;">WS-03</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span class="pill pill-amber" style="font-size:7pt;padding:0.8mm 3mm;">Effort · Med</span><span class="pill pill-green" style="font-size:7pt;padding:0.8mm 3mm;">ROI · High</span></div></div>
+          <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;line-height:1.15;color:var(--text);margin-top:3mm;letter-spacing:-0.3px;">Lock executive alignment + targets</div>
           <div style="font-size:9pt;color:var(--textSec);line-height:1.45;margin-top:2mm;flex:1;">Run the workshop with the executive sponsor and lock the 12 / 24-month partner-sourced targets (25% / 34%). Fortnightly partnership review cadence with the CRO.</div>
           <div style="margin-top:3mm;padding-top:3mm;border-top:1px solid var(--borderSoft);display:flex;gap:6mm;"><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Owner</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Alex Chen · CRO</div></div><div><div style="font-size:7pt;color:var(--emerald);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Window</div><div style="font-size:9pt;color:var(--text);font-weight:700;margin-top:1mm;">Day 0 → Day 14</div></div></div>
         </div>
@@ -2222,8 +2222,8 @@
         <div style="background:linear-gradient(135deg,var(--emerald),var(--forest));color:#fff;border-radius:3mm;padding:5mm 6mm;display:flex;flex-direction:column;position:relative;overflow:hidden;">
           <div style="position:absolute;top:-20mm;right:-15mm;width:80mm;height:80mm;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.16),transparent 65%);"></div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;height:100%;">
-            <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-size:28pt;color:#fff;line-height:0.9;letter-spacing:-0.8px;">WS-08</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span style="background:rgba(255,255,255,0.25);color:#fff;padding:0.8mm 3mm;border-radius:99px;font-size:7pt;font-weight:800;letter-spacing:0.4px;text-transform:uppercase;">Effort · Med</span><span style="background:rgba(255,255,255,0.25);color:#fff;padding:0.8mm 3mm;border-radius:99px;font-size:7pt;font-weight:800;letter-spacing:0.4px;text-transform:uppercase;">ROI · High</span></div></div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:15pt;line-height:1.15;color:#fff;margin-top:3mm;letter-spacing:-0.3px;">Bottom-up model + Crawl/Walk/Run cadence</div>
+            <div style="display:flex;justify-content:space-between;align-items:center;"><div style="display:flex;align-items:baseline;gap:3mm;"><div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:28pt;color:#fff;line-height:0.9;letter-spacing:-0.8px;">WS-08</div><span style="font-size:14pt;color:#F59E0B;">★</span></div><div style="display:flex;gap:1.5mm;flex-direction:column;align-items:flex-end;"><span style="background:rgba(255,255,255,0.25);color:#fff;padding:0.8mm 3mm;border-radius:99px;font-size:7pt;font-weight:800;letter-spacing:0.4px;text-transform:uppercase;">Effort · Med</span><span style="background:rgba(255,255,255,0.25);color:#fff;padding:0.8mm 3mm;border-radius:99px;font-size:7pt;font-weight:800;letter-spacing:0.4px;text-transform:uppercase;">ROI · High</span></div></div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:15pt;line-height:1.15;color:#fff;margin-top:3mm;letter-spacing:-0.3px;">Bottom-up model + Crawl/Walk/Run cadence</div>
             <div style="font-size:9pt;color:#C4D9D2;line-height:1.45;margin-top:2mm;flex:1;">Build the Bottom-Up Partnership Model (8 categories × 4 regions). Run the Crawl / Walk / Run review with the executive sponsor every 90 days. Reconciles top-down vs bottom-up.</div>
             <div style="margin-top:3mm;padding-top:3mm;border-top:1px solid rgba(255,255,255,0.18);display:flex;gap:6mm;"><div><div style="font-size:7pt;color:#86EFAC;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Owner</div><div style="font-size:9pt;color:#fff;font-weight:700;margin-top:1mm;">Priya Singh + Alex Chen</div></div><div><div style="font-size:7pt;color:#86EFAC;letter-spacing:1.2px;text-transform:uppercase;font-weight:800;">Window</div><div style="font-size:9pt;color:#fff;font-weight:700;margin-top:1mm;">Day 20 → ongoing</div></div></div>
           </div>
@@ -2252,7 +2252,7 @@
         <div style="background:linear-gradient(180deg,#10B981,#059669);color:#fff;border-radius:3mm;padding:6mm 7mm;display:flex;flex-direction:column;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.18);padding-bottom:3mm;">
             <div style="font-size:8pt;color:#86EFAC;letter-spacing:2px;text-transform:uppercase;font-weight:800;">Crawl</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;letter-spacing:-0.2px;">Days 1-90</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;letter-spacing:-0.2px;">Days 1-90</div>
           </div>
           <ul style="list-style:none;padding:0;margin:3mm 0 0;display:flex;flex-direction:column;gap:2.5mm;flex:1;">
             <li style="font-size:8pt;line-height:1.4;color:#fff;position:relative;padding-left:4mm;"><span style="position:absolute;left:0;top:0;color:#86EFAC;font-weight:800;">&bull;</span>Run the workshop and lock 12 / 24-month targets</li>
@@ -2275,7 +2275,7 @@
         <div style="background:linear-gradient(180deg,#047857,#065F46);color:#fff;border-radius:3mm;padding:6mm 7mm;display:flex;flex-direction:column;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.18);padding-bottom:3mm;">
             <div style="font-size:8pt;color:#86EFAC;letter-spacing:2px;text-transform:uppercase;font-weight:800;">Walk</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;letter-spacing:-0.2px;">Days 90-180</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;letter-spacing:-0.2px;">Days 90-180</div>
           </div>
           <ul style="list-style:none;padding:0;margin:3mm 0 0;display:flex;flex-direction:column;gap:2.5mm;flex:1;">
             <li style="font-size:8pt;line-height:1.4;color:#fff;position:relative;padding-left:4mm;"><span style="position:absolute;left:0;top:0;color:#86EFAC;font-weight:800;">&bull;</span>Map second-degree partners and name intersections to drive co-activation</li>
@@ -2290,7 +2290,7 @@
         <div style="background:linear-gradient(180deg,#064E3B,#022C22);color:#fff;border-radius:3mm;padding:6mm 7mm;display:flex;flex-direction:column;">
           <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(255,255,255,0.18);padding-bottom:3mm;">
             <div style="font-size:8pt;color:#86EFAC;letter-spacing:2px;text-transform:uppercase;font-weight:800;">Run</div>
-            <div style="font-family:'Work Sans',system-ui,sans-serif;font-size:14pt;letter-spacing:-0.2px;">Days 180+</div>
+            <div style="font-family:'Work Sans',system-ui,sans-serif;font-weight:700;font-size:14pt;letter-spacing:-0.2px;">Days 180+</div>
           </div>
           <ul style="list-style:none;padding:0;margin:3mm 0 0;display:flex;flex-direction:column;gap:2.5mm;flex:1;">
             <li style="font-size:8.5pt;line-height:1.5;color:#C4D9D2;font-style:italic;position:relative;padding-left:4mm;"><span style="position:absolute;left:0;top:0;color:#86EFAC;font-weight:800;">&bull;</span>Scale the programme. Move from 12% partner-sourced (T+180) toward the 25% 18-month target and the 34% Year-2 aspiration anchored on hyperscaler co-sell, Tier-1 GSI delivery and embedded ISVs.</li>

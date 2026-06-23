@@ -16,7 +16,7 @@
 |---|---|
 | Page size | 338.67mm × 190.5mm (landscape A4) |
 | Page margin | 0 (full bleed) |
-| Fonts | Work Sans only · 300/400/500/600/700/800/900 (single-family system; DM Serif Display removed 24/06/2026) |
+| Fonts | Work Sans only · 300/400/500/600/700/800/900 (single-family system; DM Serif Display removed 24/06/2026). Brand-guide weight + tracking: Heading = 700 Bold · -0.02em; Sub-heading = 300 Light · -0.04em; Body = 300 Light · 0 tracking. |
 | Print colour | `-webkit-print-color-adjust:exact` so gradients + radial fills render |
 | Page break | `page-break-after:always` between sections |
 | Resolution target | 144 dpi minimum on logos + screenshots; SVG inline where possible |
@@ -237,7 +237,7 @@ Per-engagement values pulled from the engagement record:
 | Riley R6 Crawl-Walk-Run | Page 30 | (per engagement) |
 | Riley R8 24-month timeline | Page 31 | (per engagement) |
 
-Branding stays constant — HockeyStick logos + colour tokens + Work Sans (single-family) since 24/06/2026.
+Branding stays constant — HockeyStick logos + colour tokens + Work Sans (single-family, brand-spec weights/tracking) since 24/06/2026.
 
 ---
 
