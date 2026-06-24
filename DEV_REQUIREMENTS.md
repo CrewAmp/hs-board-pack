@@ -1,12 +1,21 @@
 # Riley Board Pack · Developer Requirements
 
-**Status:** v10 spec (2026-06-24) — supersedes v9 same-day.
+**Status:** v11 spec (2026-06-24) — supersedes v10 same-day.
 
-**Output:** 32-page landscape A4 PDF. Page count went 32 → 33 (v9, GTM split) → 32 (v10, orphan old GTM page deleted). Generated server-side from `index.html` via Cloudflare Browser Rendering, saved to R2, link returned to Riley as the final agent deliverable.
+**Output:** 32-page landscape A4 PDF. Generated server-side from `index.html` via Cloudflare Browser Rendering, saved to R2, link returned to Riley as the final agent deliverable.
 
 **Live mockup:** https://hs-board-pack.pages.dev · source `hs-board-pack-mockup/index.html`
 
-**Latest snapshot PDF:** `safetyculture-board-pack-2026-06-24-v10.pdf`
+**Latest snapshot PDF:** `safetyculture-board-pack-2026-06-24-v11.pdf`
+
+**v11 changelog (vs v10)**
+- **Page 1 cover:** title 74pt → 60pt + tighter `cover-mid` gap (10mm → 5mm) and Align Phase 32pt → 24pt — fixes the 3-line wrap on "Partnership Strategy" that was pushing the Strictly Private & Confidential strip off the page.
+- **Page 2 agenda:** top-right `pageheader-client` changed from "Prepared for SafetyCulture executive sponsor" to just "Prepared for SafetyCulture".
+- **Page 4 (HS Vision + Client roster):** doc note expanded — MUST render the brand logos exactly as they appear in the in-platform Riley deliverable (same SVGs, same monochrome / grayscale treatment, same height). Placeholder text labels are not acceptable in production.
+- **Page 6 (Revenue Gap):** every "18 month / 18-month / 18 months" reference changed to 24 month (lede copy + hero eyebrow + bar-chart row label).
+- **Page 13 (Customer Impact)** redesigned per the new platform spec: WAU panel removed; commercial hook promoted to a hero strip at the top with the Inputs panel beside it; two evidence cards underneath (Win Rate as 3 colour-coded square tiles · Direct 22% / With partner 38% / Benchmark 41% dashed; Average Deal Size as 2 tiles · Without partner $28.0K / With partner $46.0K). Gap label changed to "+19pp" (percentage points, not %).
+- **Pages 20/21 (Partnership Growth Model · Yr 1 / Yr 2):** categories sub-list strip at the bottom replaced with the 8-category horizontal view per year (Technology / Strategic / Channel / Referral / Reseller / Affiliate / Marketplace / OEM — each card carries that category's partner-led Revenue % + Leads % share for that year).
+- Renumber pass run; all footer-pg cells read `NN of 32`.
 
 **v10 changelog (vs v9)**
 - Deleted orphan OLD "Partnership GTM Channels · Top Down Model" page that was still wedged between the new Yr 1 / Yr 2 Growth Model pages (left behind by the v9 split). Deck drops 33 → 32 pages.
@@ -116,7 +125,7 @@ Legend for **Type**: `cover` (full-bleed title), `divider` (full-bleed section b
 | # | Page | Type | Title / breadcrumb | Source(s) | Variability per client | PDF vs Platform format |
 |---|---|---|---|---|---|---|
 | 03 | HockeyStick Framework · 5 pillars | content · static | `The HockeyStick Partnerships Framework · five pillars to compounding partner revenue.` | Static narrative + bar-chart visual (`R3_PILLARS_SEED`). Passive/Active dotted zone dividers sit between bar boundary 6/15 + 9/15 and end at the bar base. | None | Identical |
-| 04 | HockeyStick · Our Vision + Client roster | content · static | `Vision: To enable partnerships…` + client roster | Vision sentence is static. Client roster table comes from `RILEY.client_roster` constant — **DEV NOTE: in production, replace text labels with brand-mark SVGs from the client logo CDN (monochrome grayscale on this page).** | None (client roster is always HockeyStick's logo wall, not the current client's customers) | PDF uses text labels for now; production replaces with SVG logos |
+| 04 | HockeyStick · Our Vision + Client roster | content · static | `Vision: To enable partnerships…` + client roster | Vision sentence is static. Client roster table comes from `RILEY.client_roster` constant. **MUST-DO (production):** render the brand logos *exactly as they appear in the in-platform Riley deliverable* on this page — same SVG assets, same monochrome/grayscale treatment, same height. The placeholder text labels in the mockup are NOT acceptable in the production PDF; replace them with the brand-mark SVGs pulled from the platform's client logo CDN. | None (client roster is always HockeyStick's logo wall, not the current client's customers) | PDF must mirror the platform logo wall 1:1 — same SVGs, same treatment, same layout. |
 | 05 | `{ClientName}` Partnership Vision | content · dynamic | `{ClientName} Partnership Vision` + the verbatim vision statement | `engagement.a1_vision_statement_a` (Alex A1 deliverable). Eyebrow templated with `{client.name}`. | Vision statement, client name in eyebrow | Identical |
 | 06 | What's possible through partnerships (Revenue Gap) | content · dynamic | `What's possible through partnerships?` + closeable gap headline | `CLIENT.revenue_aud × {partnerSourcedPct, partnerTargetPct, peerMedianPct}`. Default `partnerSourcedPct=12%`, `partnerTargetPct=25%`, `peerMedianPct=30%` (Crossbeam top-quartile). | Revenue value, partner-sourced % today, target %, calculated closeable gap | Identical |
 
